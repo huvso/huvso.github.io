@@ -94,12 +94,12 @@ analytics:
 # Site Author
 author:
   name             : "Huvso"
-  avatar           : "/assets/images/profile.png"
+  avatar           : "/assets/images/huvso.png"
   bio              : "I am an **amazing** person."
-  location         : "Seoul"
+  location         : "Seoul, South Korea"
   email            :
   links:
-    - label: "Email"
+    - label: "Email: huvso100@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:huvso100@gmail.com"
     - label: "Website"
@@ -111,7 +111,7 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
+    - label: "GitHub: https://github.com/huvso"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/huvso"
     - label: "Instagram"
