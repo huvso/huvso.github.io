@@ -1,10 +1,8 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+title: "Post: Future Date"
+date: 9999-12-31
+categories:
+  - Post
 ---
 
-# Welcome
-
-**Hello world**, this is my first Jekyll blog post.
-
-I hope you like it!
+This post lives in the future and is dated {{ page.date | date: "%c" }}. When building Jekyll with the `--future` flag it should appear.
