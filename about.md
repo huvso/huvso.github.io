@@ -1,57 +1,35 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      : &EN       About
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  关于
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  關於
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       About Me
-  ko-KR   : *KO
-  fr      : &FR       À propos
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  # @end locale config
 key: page-about
 ---
 
-![Profile](https://github.com/huvso/huvso.github.io/blob/master/assets/images/profile.png?raw=true)
+<img src="https://github.com/huvso/huvso.github.io/blob/master/assets/images/profile_rounded.png?raw=true" align="center" title="profile img" alt="profile img" width="200" height="200"
+/>
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.sdfsdf
+백 대한 / BAEK DAEHAN
+SOFTWARE ENGINEER
 
 ```python
 print('hello')
 ```
 
-## Features
+## Hard Skill Experience
+ - 삼성 메디슨 ERP 연동 웹페이지 유지 보수
+ - OBD(On-Board Diagnostic) 정보 연동 앱 개발
+ - 마이크로메터기 모니터링 시스템 개발
+ - 게임 서버 개발 [프렌즈런]
+ - 게임 서버 개발 [라인런(가칭)]
+ - 빅데이터 기반 부동산 동향 및 추세 분석을 위한 GIS 개발
+ - IoT 비상벨 모니터링 시스템 개발
+ - 소켓 통신 기반 경진대회 스코어 보드 웹사이트 개발
+ - 빅데이터 연구자를 위한 클라우드컴퓨팅 기반 커뮤니티 사이트 개발
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+## Soft Skill Experience
+ - 중소기업 경쟁력 강화를 위한 기업 간 공유경제 모델 개발
+ - 항만/물류 스마트 정보서비스 전문인력양성 사업
+ - 해운물류 Active IP-RFID 기술 개발
+ - 컨테이너 부두용 3D 모니터링 기술 개발
+ - IoT 기반 글로벌 공급사슬 관리 혁신에 관한 연구
 
 ## Skins
 

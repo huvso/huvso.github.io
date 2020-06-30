@@ -1,0 +1,129 @@
+---
+layout: page
+title: about me
+show_title: false
+permalink: /aboutme.html
+---
+
+<div style="margin-top: 20px">
+  <img src="https://github.com/huvso/huvso.github.io/blob/master/assets/images/profile_rounded.png?raw=true"
+    title="profile img" alt="profile img"
+    class="image--md"
+    style="display: block; margin: 0px auto;"
+  />
+  <p class="t-center portpolio-lg"><span class="highlight">S</span>OFTWARE <span class="highlight">E</span>NGINEER</p>
+
+  <h3>Technology Specification</h3>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Language</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Database</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Infra</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Framework</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Domain</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Design</button>
+  </div>
+
+  <div id="London" class="tabcontent">
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p> 
+  </div>
+
+  <div id="Tokyo" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  <p>asdfasdf</p>
+  <p>asdfasdf</p>
+  <p>asdfasdf</p>
+  <p>asdfasdf</p>
+  <p>asdfasdf</p>
+  <p>asdfasdf</p>
+<style>
+  .t-center {
+    text-align: center;
+  }
+
+  p.portpolio-lg {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  span.highlight {
+    font-size: inherit;
+    font-weight: bold;
+    color: #fc3d66;
+  }
+
+  .tab {
+    float: left;
+    border: 1px solid #fc3d66;
+    width: 20%;
+    height: 300px;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: #ffffff;
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #fc3d66;
+  }
+
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #fc3d66;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #fc3d66;
+    width: 80%;
+    border-left: none;
+    height: 300px;
+  }
+</style>
+
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
