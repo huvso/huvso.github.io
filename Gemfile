@@ -1,6 +1,7 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+gem "jekyll-text-theme"
 gem 'nokogiri'
 gem 'rack', '~> 2.0.1'
 gem 'rspec'
-
-gem "minimal-mistakes-jekyll"
+# gem "github-pages", group: :jekyll_plugins
+# gemspec
