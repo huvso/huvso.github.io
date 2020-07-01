@@ -1,3 +1,9 @@
 /* start custom scss snippet */
-
+code {
+  font-size: map-get($base, font-size-sm);
+  line-height: 1.4;
+}
+.page__aside .toc-aside {
+  padding: 3rem 0 1rem 1rem;
+}
 /* end custom scss snippet */

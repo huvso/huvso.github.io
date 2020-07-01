@@ -2629,6 +2629,10 @@ body, html, .root, .layout--page { height: 100%; }
 .layout--404 .sign p { font-size: 1.8rem; }
 
 /* start custom scss snippet */
+code { font-size: 0.85rem; line-height: 1.4; }
+
+.page__aside .toc-aside { padding: 3rem 0 1rem 1rem; }
+
 /* end custom scss snippet */
 
 /*# sourceMappingURL=main.css.map */
