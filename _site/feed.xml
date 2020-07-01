@@ -1,84 +1,599 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2020-07-02T04:09:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Huvso</title><subtitle>Your Site Description
-</subtitle><author><name>huvso</name><email>huvso100@gmail.com</email></author><entry><title type="html">VirtualBox 새 머신 만들기</title><link href="http://localhost:4000/2020/07/01/virtualbox-make-imgae.html" rel="alternate" type="text/html" title="VirtualBox 새 머신 만들기" /><published>2020-07-01T00:00:00+09:00</published><updated>2020-07-01T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/01/virtualbox%20make%20imgae</id><content type="html" xml:base="http://localhost:4000/2020/07/01/virtualbox-make-imgae.html">&lt;h1 id=&quot;virtualbox-새-머신-만들기&quot;&gt;VirtualBox 새 머신 만들기&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2020-07-02T05:01:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Huvso</title><subtitle>Your Site Description
+</subtitle><author><name>huvso</name><email>huvso100@gmail.com</email></author><entry><title type="html">VirtualBox 브릿지 어댑터 등록</title><link href="http://localhost:4000/2020/07/02/virtualbox-make-bridge-adapter.html" rel="alternate" type="text/html" title="VirtualBox 브릿지 어댑터 등록" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/virtualbox%20make%20bridge%20adapter</id><content type="html" xml:base="http://localhost:4000/2020/07/02/virtualbox-make-bridge-adapter.html">&lt;h1 id=&quot;virtualbox-브릿지-어댑터-등록&quot;&gt;VirtualBox 브릿지 어댑터 등록&lt;/h1&gt;
 
-&lt;h2 id=&quot;새-머신-생성하기&quot;&gt;새 머신 생성하기&lt;/h2&gt;
-&lt;h3 id=&quot;1-머신-생성-마법사-실행&quot;&gt;1. 머신 생성 마법사 실행&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/01_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 01&quot; alt=&quot;make vimg 01&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 처음 나오는 화면에서 새로 만들기(N) 클릭
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;시작&quot;&gt;시작&lt;/h2&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;! 첫 화면과 다른 화면이 보인다면 다음과 같이 첫 화면으로 이동 할 수 있음
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/01_01_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 01_01&quot; alt=&quot;make vimg 01_01&quot; /&gt;
-&lt;strong&gt;**&lt;/strong&gt;&lt;strong&gt;**&lt;/strong&gt;&lt;strong&gt;**&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;간혹 VirtualBox에서 Bridge Adapter를 사용하려고 하는 경우 아래와 같이 어댑터를 찾지 못하는 문제에 직면하게 된다.&lt;/li&gt;
+  &lt;li&gt;이와 관련하여VirtualBox 게스트 네트워크 드라이버 문제로서 네트워크 드라이버 설치 과정에 대해 설명한다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;2-이름-및-운영-체제-정의&quot;&gt;2. 이름 및 운영 체제 정의&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/02_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 02&quot; alt=&quot;make vimg 02&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/01.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 01&quot; alt=&quot;make bridge adapter 01&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 각 내용에 지정하고자 하는 내용을 입력함
-  - 이름: 가상 머신의 식별을 위한 이름
-  - 머신 폴더: 가상 머신에 관련된 정보들이 저장될 경로(해당 폴더안에 이름 별로 폴더가 생성됨)
-  - 종류: 설치할 OS 계열
-  - 버전: 설치할 OS의 상세 종류 (버전, OS 상세 계열, bit 수)
+&lt;hr /&gt;
 
-2. 다음(N) 클릭
+&lt;h2 id=&quot;virtualbox-네트워크-드라이버-설치&quot;&gt;VirtualBox 네트워크 드라이버 설치&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/02_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 02&quot; alt=&quot;make bridge adapter 02&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 제어판 이동(win+R -&amp;gt; control 입력)
+2. 네트워크 및 공유 센터 클릭
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;3-메모리-크기-정의&quot;&gt;3. 메모리 크기 정의&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/03_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 03&quot; alt=&quot;make vimg 03&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 생성 하고자 하는 메모리 크기를 정의
-  - 슬라이더 또는 박스에 숫자로 기입 할 수 있음
-
-2. 다음(N) 클릭
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/03_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 03&quot; alt=&quot;make bridge adapter 03&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 어댑터 설정 변경 클릭
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;4-하드-디스크-정의&quot;&gt;4. 하드 디스크 정의&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/04_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 04&quot; alt=&quot;make vimg 04&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 지금 새 가상 하드 디스크 만들기(C) 라디오버튼 선택
-  - 가상 하드디스크를 추가하지 않음: 가상 머신 생성 시 디스크를 만들지 않음
-  - 지금 새 가상 하드 디스크 만들기: 가상 머신 생성 시 새로운 가상 디스크를 만듦
-  - 기존 가상 하드 디스크 파일 사용: 기존에 생성된 가상 디스크를 해당 가상 머신에서 사용
-
-2. 만들기(N) 클릭
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/05_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 05&quot; alt=&quot;make bridge adapter 05&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. VirtualBox Host-Only Ethernet Adapter 마우스 우측 클릭
+2. 속성 클릭
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;5-하드-디스크-파일-종류-정의&quot;&gt;5. 하드 디스크 파일 종류 정의&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/05_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 05&quot; alt=&quot;make vimg 05&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. VDI(VirtualBox Disk Image) 라디오버튼 선택
-  - VDI(VirtualBox Disk Image): VirtualBox에서만 사용이 가능한 형태
-  - VHD(Virtual Hard Disk): VirtualBox(Oracle), Hyper-V(MS), Xen(Citrix)에서 사용이 가능한 형태
-  - VMDK(Virtual Machine Disk): VirtualBox(Oracle), VMWare(MS)에서 사용이 가능한 형태
-
-2. 다음(N) 클릭
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/06_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 06&quot; alt=&quot;make bridge adapter 06&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 설치 클릭
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;6-파일-위치-및-크기-종류-정의&quot;&gt;6. 파일 위치 및 크기 종류 정의&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/06_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 06&quot; alt=&quot;make vimg 06&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 파일 위치는 default로 정의하는 것이 좋음
-2. 새 가상 하드 디스크 크기 정의
-  - 슬라이더 또는 박스에 숫자로 기입 할 수 있음
-2. 만들기 클릭
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/07_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 07&quot; alt=&quot;make bridge adapter 07&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 서비스 클릭
+2. 추가 클릭
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;7-가상-하드-디스크-만들기-process-창&quot;&gt;7. 가상 하드 디스크 만들기 Process 창&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/07.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 07&quot; alt=&quot;make vimg 07&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 가상 하드 디스크 구성 중인 화면으로 가상 하드 디스크의 크기에 따라 생성 시간에 차이가 있음
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/08_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 08&quot; alt=&quot;make bridge adapter 08&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 디스크 있음 클릭
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;8-새-가상-머신-만들기-완료&quot;&gt;8. 새 가상 머신 만들기 완료&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/08_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 08&quot; alt=&quot;make vimg 08&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;좌측 신규 가상 머신이 제대로 생성 되었는지 확인
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="VirtualBox" /><summary type="html">VirtualBox 새 머신 만들기 새 머신 생성하기 1. 머신 생성 마법사 실행 1. 처음 나오는 화면에서 새로 만들기(N) 클릭 ! 첫 화면과 다른 화면이 보인다면 다음과 같이 첫 화면으로 이동 할 수 있음 ****** 2. 이름 및 운영 체제 정의 1. 각 내용에 지정하고자 하는 내용을 입력함 - 이름: 가상 머신의 식별을 위한 이름 - 머신 폴더: 가상 머신에 관련된 정보들이 저장될 경로(해당 폴더안에 이름 별로 폴더가 생성됨) - 종류: 설치할 OS 계열 - 버전: 설치할 OS의 상세 종류 (버전, OS 상세 계열, bit 수) 2. 다음(N) 클릭 3. 메모리 크기 정의 1. 생성 하고자 하는 메모리 크기를 정의 - 슬라이더 또는 박스에 숫자로 기입 할 수 있음 2. 다음(N) 클릭 4. 하드 디스크 정의 1. 지금 새 가상 하드 디스크 만들기(C) 라디오버튼 선택 - 가상 하드디스크를 추가하지 않음: 가상 머신 생성 시 디스크를 만들지 않음 - 지금 새 가상 하드 디스크 만들기: 가상 머신 생성 시 새로운 가상 디스크를 만듦 - 기존 가상 하드 디스크 파일 사용: 기존에 생성된 가상 디스크를 해당 가상 머신에서 사용 2. 만들기(N) 클릭 5. 하드 디스크 파일 종류 정의 1. VDI(VirtualBox Disk Image) 라디오버튼 선택 - VDI(VirtualBox Disk Image): VirtualBox에서만 사용이 가능한 형태 - VHD(Virtual Hard Disk): VirtualBox(Oracle), Hyper-V(MS), Xen(Citrix)에서 사용이 가능한 형태 - VMDK(Virtual Machine Disk): VirtualBox(Oracle), VMWare(MS)에서 사용이 가능한 형태 2. 다음(N) 클릭 6. 파일 위치 및 크기 종류 정의 1. 파일 위치는 default로 정의하는 것이 좋음 2. 새 가상 하드 디스크 크기 정의 - 슬라이더 또는 박스에 숫자로 기입 할 수 있음 2. 만들기 클릭 7. 가상 하드 디스크 만들기 Process 창 1. 가상 하드 디스크 구성 중인 화면으로 가상 하드 디스크의 크기에 따라 생성 시간에 차이가 있음 8. 새 가상 머신 만들기 완료 좌측 신규 가상 머신이 제대로 생성 되었는지 확인</summary></entry><entry><title type="html">Python Type Checking</title><link href="http://localhost:4000/2020/07/01/python-type-checking.html" rel="alternate" type="text/html" title="Python Type Checking" /><published>2020-07-01T00:00:00+09:00</published><updated>2020-07-01T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/01/python%20type%20checking</id><content type="html" xml:base="http://localhost:4000/2020/07/01/python-type-checking.html">&lt;h1 id=&quot;python-type-checkingguide--20200408&quot;&gt;Python Type Checking(Guide) – 20200408&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/09_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 09&quot; alt=&quot;make bridge adapter 09&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 찾아보기 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/10_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 10&quot; alt=&quot;make bridge adapter 10&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. &quot;C:\Program Files\Oracle\VirtualBox\drivers\network\netlwf&quot; 경로 이동
+2. VBoxNetLwf.inf 클릭
+3. 열기 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/11_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 11&quot; alt=&quot;make bridge adapter 11&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 확인 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/12_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 12&quot; alt=&quot;make bridge adapter 12&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 확인 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/13_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 13&quot; alt=&quot;make bridge adapter 13&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. VirtualBox NDIS6 Bridged Networking Driver 추가 확인
+2. 확인 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/03%20make%20bridge%20adapter/img/14_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make bridge adapter 14&quot; alt=&quot;make bridge adapter 14&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. VirtualBox 가상머신 네트워크 브릿지 이름 확인
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="VirtualBox" /><summary type="html">VirtualBox 브릿지 어댑터 등록 시작 간혹 VirtualBox에서 Bridge Adapter를 사용하려고 하는 경우 아래와 같이 어댑터를 찾지 못하는 문제에 직면하게 된다. 이와 관련하여VirtualBox 게스트 네트워크 드라이버 문제로서 네트워크 드라이버 설치 과정에 대해 설명한다. VirtualBox 네트워크 드라이버 설치 1. 제어판 이동(win+R -&amp;gt; control 입력) 2. 네트워크 및 공유 센터 클릭 1. 어댑터 설정 변경 클릭 1. VirtualBox Host-Only Ethernet Adapter 마우스 우측 클릭 2. 속성 클릭 1. 설치 클릭 1. 서비스 클릭 2. 추가 클릭 1. 디스크 있음 클릭 1. 찾아보기 클릭 1. &quot;C:\Program Files\Oracle\VirtualBox\drivers\network\netlwf&quot; 경로 이동 2. VBoxNetLwf.inf 클릭 3. 열기 클릭 1. 확인 클릭 1. 확인 클릭 1. VirtualBox NDIS6 Bridged Networking Driver 추가 확인 2. 확인 클릭 1. VirtualBox 가상머신 네트워크 브릿지 이름 확인</summary></entry><entry><title type="html">PIP Install Option</title><link href="http://localhost:4000/2020/07/02/python-pip-option.html" rel="alternate" type="text/html" title="PIP Install Option" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/python%20pip%20option</id><content type="html" xml:base="http://localhost:4000/2020/07/02/python-pip-option.html">&lt;h1 id=&quot;pip-install-option&quot;&gt;pip Install Option&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pip install –help로 Option 리스트를 볼 수 있음&lt;/li&gt;
+  &lt;li&gt;help 명령어는 Keyword를 한눈에 보기 어려워 Option List를 정리하고자 함&lt;/li&gt;
+  &lt;li&gt;현재문서는 단순 설명을 번역하는 수준밖에 되지 않지만 직접 사용해보면서 설명이나 know-how를 추가하겠음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;설치-옵션&quot;&gt;설치 옵션&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;-r, –requirement&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;requirements file을 명시하여 설치하고자 여러개의 package를 한번에 설치&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;requirements file의 형식은 다음과 같음&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Python Excel
+pyexcel==0.5.8
+pyexcel-xls==0.5.7
+pyexcel-xlsx=0.5.6
+    
+# DB Connector
+pyhive==0.6.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-c –constraint&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;설치 package의 version에 대한 제약 조건 파일을 명시&lt;/li&gt;
+  &lt;li&gt;constraint file은 requirements.txt 파일에 -c 형태로도 명시 할 수 있음&lt;/li&gt;
+  &lt;li&gt;constraint file은 requirements.txt 파일과 구분하여 package 관리를 좀 더 깔끔하게 할 수 있음&lt;/li&gt;
+  &lt;li&gt;pip 8.0 이후에는 hash key를 이용한 버전 제약 조건을 관리하는것이 더 좋을 수 있음&lt;/li&gt;
+  &lt;li&gt;참조: &lt;a href=&quot;https://stackoverflow.com/questions/34645821/pip-constraints-files/34653182&quot;&gt;https://stackoverflow.com/questions/34645821/pip-constraints-files/34653182&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-no-deps&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;의존성 package들을 설치 하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--pre&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시험판이나 개발 버전을 설치 할 수 있도록 함&lt;/li&gt;
+  &lt;li&gt;기본적으로 pip는 stable version만을 설치함&lt;/li&gt;
+  &lt;li&gt;module 개발을 한다거나 필요한 기능의 module을 테스트 할 때 활용 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--e, –editable &amp;lt;path/url&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;setuptools의 develop mode 처럼 패키지를 수정 가능한 모드로 설치 할 수 있음&lt;/li&gt;
+  &lt;li&gt;project path를 명시하거나 형상관리(Git, SVN 등)툴의 url을 명시 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-t, –target&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패키지를 설치하고자 하는 경로를 명시하여 설치 할 때 사용&lt;/li&gt;
+  &lt;li&gt;기본적으로 이 옵션은 기존 파일/폴더를 대체하지 않고 해당 명령이 수행 될 때만 경로를 변경해서 설치&lt;/li&gt;
+  &lt;li&gt;의 기존 패키지를 새 버전으로 바꾸려면 –upgrade 옵션을 사용할 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--user&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자 경로에 설치함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;–root&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;root directory에 설치를 한다고 하는데 잘 모르겠음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;–prefix&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lib,bin 및 기타 최상위 폴가 있는 설치 접두사&lt;/li&gt;
+  &lt;li&gt;-t, –user, –root, –prefix 이 것들은 정확히 무엇을 위한 옵션인지는 모르겠음.&lt;/li&gt;
+  &lt;li&gt;python package directory 관리를 위한 옵션이라는 것을 알겠으나,&lt;/li&gt;
+  &lt;li&gt;어떤 디렉토리들을 설정하고 그 디렉토리들이 python에서 어떻게 참조되는지 명확한 이해가 필요할 듯&lt;/li&gt;
+  &lt;li&gt;또한 직접 사용해보면서 삽질을 많이 해봐야겠음&lt;/li&gt;
+  &lt;li&gt;참조: &lt;a href=&quot;https://stackoverflow.com/questions/25333640/pip-python-differences-between-install-option-prefix-and-root-and&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-b, –build&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패키지 압축해제 및 빌드할 디렉토리 명시&lt;/li&gt;
+  &lt;li&gt;초기 빌드는 임시 디렉토리&lt;/li&gt;
+  &lt;li&gt;임시 디렉토리의 위치는 Linux에서는 TMPDIR 환경 변수를 설정하고 Windows에서는 TEMP 환경 변수를 설정하여 제어 할 수 있음&lt;/li&gt;
+  &lt;li&gt;빌드가 될 때 실패되면 빌드 디렉토리는 clean 되지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-src&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;편집 가능한 프로젝트를 check out할 디렉토리&lt;/li&gt;
+  &lt;li&gt;virtualenv의 기본값은 “ / src”&lt;/li&gt;
+  &lt;li&gt;전역 설치의 기본값은 “ / src”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-U, –upgrade&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패키지를 최신 버전으로 업그레이드&lt;/li&gt;
+  &lt;li&gt;종속성 처리는 upgrade-strategy에 따름&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--upgrade-strategy &amp;lt;upgrade_strategy&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;종속성 업그레이드를 처리하는 방법 결정[default: only-if-needed]&lt;/li&gt;
+  &lt;li&gt;종속성 업그레이드 처리 방법은 두 종류가 있고 자세한 설명은 다음과 같음&lt;br /&gt;
+· “eager”: 현재 설치된 버전이 업그레이드 된 패키지의 요구 사항을 충족 하는지 상관 없이 종속성이 업그레이드 됨&lt;br /&gt;
+· “only-if-needed”: 업그레이드 된 패키지의 요구 사항을 충족하지 않는 경우에만 업그레이드 됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--force-reinstall&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;무조건 모든 패키지를 재설치함&lt;/li&gt;
+  &lt;li&gt;최신 버전의 패키지라도 무조건 재설치함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--l, –ignore-installed&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;설치가 되어있는 패키지들은 무시함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--ignore-requires-python&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Requires-Python 정보를 무시함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--no-build-isolation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;최신 소스 배포를 빌드 할 때 isolation을 비활성화함&lt;/li&gt;
+  &lt;li&gt;이 옵션을 사용하는 경우 PEP 518에서 지정한 빌드 종속성이 이미 설치되어 있어야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--install-option&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;setup.py install 명령에 arguments들을 명시&lt;/li&gt;
+  &lt;li&gt;ex) –install-option=”–install-scripts = /usr/local/bin”&lt;/li&gt;
+  &lt;li&gt;여러개의 arguments를 명시할 수 있음&lt;/li&gt;
+  &lt;li&gt;디렉토리 경로 옵션을 추가하는 경우에는 절대 경로를 사용해야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--global-option&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;setup.py global options을 명시&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--compile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python 소스 파일을 바이트 코드로 컴파일&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--no-compile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python 소스 파일을 바이트 코드로 컴파일 하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--no-warn-script-location&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PATH 외부에서 설치 할 때 warn 표시하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--no-warn-conflicts&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;깨진 의존성에 대해 warn 표시하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--only-binary&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;소스 패키지를 사용하지 않음&lt;/li&gt;
+  &lt;li&gt;여러번 명시 할 수 있으며 명시 할 때 마다 기존 값에 추가되는 형태&lt;/li&gt;
+  &lt;li&gt;format_control의 종류는 2가지고 있고 자세한 설명은 다음과 같음&lt;br /&gt;
+· all: 모든 소스 패키지 비활성화&lt;br /&gt;
+· none: 세트를 비우기 위해 사용됨. 하나이상의 패키지를 비우려면 패키지 이름 사이에 comma 사용&lt;/li&gt;
+  &lt;li&gt;바이너리 배포판이 없는 패키지의 경우 이 옵션을 사용하면 설치 되지 않음\&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--prefer-binary&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;최신 소스 패키지보다 오래된 바이너리 패키지 우선 설치&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--no-clean&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;build directory들을 clean up 하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--progress-bar &amp;lt;progress_bar&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;progress의 종류를 설정함[pretty&lt;/td&gt;
+          &lt;td&gt;off&lt;/td&gt;
+          &lt;td&gt;on&lt;/td&gt;
+          &lt;td&gt;ascii&lt;/td&gt;
+          &lt;td&gt;emoji]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-i, –index-url&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python Package Index의 기본 url 명시(default: &lt;a href=&quot;http://pypi.org/simple&quot;&gt;http://pypi.org/simple&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;PEP 503 (단순 저장소 API)를 준수하거나 또는 동일한 형식으로 배치된 로컬 디렉토리 url을 사용해야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--extra-index-url&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;python package index를 추가 url들을 명시&lt;/li&gt;
+  &lt;li&gt;--index-url과 동일한 정책을 따름&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--no-index&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;package index 무시&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;-f, –find-links&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;html 파일의 URL 또는 경로인 경우 아카이브에 대한 링크를 구문 분석함&lt;/li&gt;
+  &lt;li&gt;로컬 경로 또는 file:// url이 디렉토리인 경우 디렉토리 목록에서 아카이브를 찾음.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;--process-dependency-links&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;의존성 링크의 프로세싱을 가능하게 함&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="Python" /><summary type="html">pip Install Option pip install –help로 Option 리스트를 볼 수 있음 help 명령어는 Keyword를 한눈에 보기 어려워 Option List를 정리하고자 함 현재문서는 단순 설명을 번역하는 수준밖에 되지 않지만 직접 사용해보면서 설명이나 know-how를 추가하겠음 설치 옵션 -r, –requirement requirements file을 명시하여 설치하고자 여러개의 package를 한번에 설치 requirements file의 형식은 다음과 같음 # Python Excel pyexcel==0.5.8 pyexcel-xls==0.5.7 pyexcel-xlsx=0.5.6 # DB Connector pyhive==0.6.0 -c –constraint 설치 package의 version에 대한 제약 조건 파일을 명시 constraint file은 requirements.txt 파일에 -c 형태로도 명시 할 수 있음 constraint file은 requirements.txt 파일과 구분하여 package 관리를 좀 더 깔끔하게 할 수 있음 pip 8.0 이후에는 hash key를 이용한 버전 제약 조건을 관리하는것이 더 좋을 수 있음 참조: https://stackoverflow.com/questions/34645821/pip-constraints-files/34653182 -no-deps 의존성 package들을 설치 하지 않음 --pre 시험판이나 개발 버전을 설치 할 수 있도록 함 기본적으로 pip는 stable version만을 설치함 module 개발을 한다거나 필요한 기능의 module을 테스트 할 때 활용 할 수 있음 --e, –editable &amp;lt;path/url&amp;gt; setuptools의 develop mode 처럼 패키지를 수정 가능한 모드로 설치 할 수 있음 project path를 명시하거나 형상관리(Git, SVN 등)툴의 url을 명시 할 수 있음 -t, –target 패키지를 설치하고자 하는 경로를 명시하여 설치 할 때 사용 기본적으로 이 옵션은 기존 파일/폴더를 대체하지 않고 해당 명령이 수행 될 때만 경로를 변경해서 설치 의 기존 패키지를 새 버전으로 바꾸려면 –upgrade 옵션을 사용할 것 --user 사용자 경로에 설치함 –root root directory에 설치를 한다고 하는데 잘 모르겠음 –prefix lib,bin 및 기타 최상위 폴가 있는 설치 접두사 -t, –user, –root, –prefix 이 것들은 정확히 무엇을 위한 옵션인지는 모르겠음. python package directory 관리를 위한 옵션이라는 것을 알겠으나, 어떤 디렉토리들을 설정하고 그 디렉토리들이 python에서 어떻게 참조되는지 명확한 이해가 필요할 듯 또한 직접 사용해보면서 삽질을 많이 해봐야겠음 참조: 링크 -b, –build 패키지 압축해제 및 빌드할 디렉토리 명시 초기 빌드는 임시 디렉토리 임시 디렉토리의 위치는 Linux에서는 TMPDIR 환경 변수를 설정하고 Windows에서는 TEMP 환경 변수를 설정하여 제어 할 수 있음 빌드가 될 때 실패되면 빌드 디렉토리는 clean 되지 않음 -src 편집 가능한 프로젝트를 check out할 디렉토리 virtualenv의 기본값은 “ / src” 전역 설치의 기본값은 “ / src” -U, –upgrade 패키지를 최신 버전으로 업그레이드 종속성 처리는 upgrade-strategy에 따름 --upgrade-strategy &amp;lt;upgrade_strategy&amp;gt; 종속성 업그레이드를 처리하는 방법 결정[default: only-if-needed] 종속성 업그레이드 처리 방법은 두 종류가 있고 자세한 설명은 다음과 같음 · “eager”: 현재 설치된 버전이 업그레이드 된 패키지의 요구 사항을 충족 하는지 상관 없이 종속성이 업그레이드 됨 · “only-if-needed”: 업그레이드 된 패키지의 요구 사항을 충족하지 않는 경우에만 업그레이드 됨 --force-reinstall 무조건 모든 패키지를 재설치함 최신 버전의 패키지라도 무조건 재설치함 --l, –ignore-installed 설치가 되어있는 패키지들은 무시함 --ignore-requires-python Requires-Python 정보를 무시함 --no-build-isolation 최신 소스 배포를 빌드 할 때 isolation을 비활성화함 이 옵션을 사용하는 경우 PEP 518에서 지정한 빌드 종속성이 이미 설치되어 있어야함 --install-option setup.py install 명령에 arguments들을 명시 ex) –install-option=”–install-scripts = /usr/local/bin” 여러개의 arguments를 명시할 수 있음 디렉토리 경로 옵션을 추가하는 경우에는 절대 경로를 사용해야함 --global-option setup.py global options을 명시 --compile Python 소스 파일을 바이트 코드로 컴파일 --no-compile Python 소스 파일을 바이트 코드로 컴파일 하지 않음 --no-warn-script-location PATH 외부에서 설치 할 때 warn 표시하지 않음 --no-warn-conflicts 깨진 의존성에 대해 warn 표시하지 않음 --only-binary 소스 패키지를 사용하지 않음 여러번 명시 할 수 있으며 명시 할 때 마다 기존 값에 추가되는 형태 format_control의 종류는 2가지고 있고 자세한 설명은 다음과 같음 · all: 모든 소스 패키지 비활성화 · none: 세트를 비우기 위해 사용됨. 하나이상의 패키지를 비우려면 패키지 이름 사이에 comma 사용 바이너리 배포판이 없는 패키지의 경우 이 옵션을 사용하면 설치 되지 않음\ --prefer-binary 최신 소스 패키지보다 오래된 바이너리 패키지 우선 설치 --no-clean build directory들을 clean up 하지 않음 --progress-bar &amp;lt;progress_bar&amp;gt; progress의 종류를 설정함[pretty off on ascii emoji] -i, –index-url Python Package Index의 기본 url 명시(default: http://pypi.org/simple) PEP 503 (단순 저장소 API)를 준수하거나 또는 동일한 형식으로 배치된 로컬 디렉토리 url을 사용해야함 --extra-index-url python package index를 추가 url들을 명시 --index-url과 동일한 정책을 따름 --no-index package index 무시 -f, –find-links html 파일의 URL 또는 경로인 경우 아카이브에 대한 링크를 구문 분석함 로컬 경로 또는 file:// url이 디렉토리인 경우 디렉토리 목록에서 아카이브를 찾음. --process-dependency-links 의존성 링크의 프로세싱을 가능하게 함</summary></entry><entry><title type="html">Proxy란?</title><link href="http://localhost:4000/2020/07/02/proxy-definition.html" rel="alternate" type="text/html" title="Proxy란?" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/proxy%20definition</id><content type="html" xml:base="http://localhost:4000/2020/07/02/proxy-definition.html">&lt;h1 id=&quot;what-is-proxy&quot;&gt;What is Proxy&lt;/h1&gt;
+
+&lt;h2 id=&quot;프록시-서버proxy-server&quot;&gt;프록시 서버(Proxy Server)&lt;/h2&gt;
+&lt;h3 id=&quot;what-is-proxy-server&quot;&gt;What is Proxy Server&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;사전적인 의미로는 ‘대리인’&lt;/li&gt;
+  &lt;li&gt;클라이언트가 자신을 통해서 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해 주는 컴퓨터나 응용 프로그램&lt;/li&gt;
+  &lt;li&gt;서버와 클라이언트 사이에서 중계기로서 대리로 통신을 수행하는 기능을 가리켜 &lt;strong&gt;‘프록시’&lt;/strong&gt;, 그 중계 기능을 하는 것을 &lt;strong&gt;‘프록시 서버’&lt;/strong&gt; 라고 부름&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;advantage-of-proxy-server&quot;&gt;Advantage of Proxy Server&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;프록시 서버에 요청된 내용들을 캐시에 저장 후, 캐시 안에 있는 정보를 이용함으로써 불필요하게 외부와의 연결을 하지 않아 전송 시간을 절약 할 수 있음&lt;/li&gt;
+  &lt;li&gt;외부와의 트래픽을 줄이게 됨으로써 네트워크 병목 현상을 방지하는 효과도 얻을 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;purpose-of-proxy-server&quot;&gt;Purpose of Proxy Server&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;캐시를 사용하여 리소스로의 접근 속도 향상&lt;/li&gt;
+  &lt;li&gt;원하지 않는 사이트 차단&lt;/li&gt;
+  &lt;li&gt;인터넷 이용률 기록, 검사&lt;/li&gt;
+  &lt;li&gt;악의적인 의도로 바이러스, 악성 루머 전파 또는, 다른 정보들을 빼낼 목적&lt;/li&gt;
+  &lt;li&gt;IP 추적을 방지&lt;/li&gt;
+  &lt;li&gt;In/Out 콘텐츠 검사&lt;/li&gt;
+  &lt;li&gt;우회&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;-&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ 
+ &lt;/p&gt;
+
+&lt;h2 id=&quot;투명-프록시transparent-proxy&quot;&gt;투명 프록시(Transparent Proxy)&lt;/h2&gt;
+&lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;투명 프록시는 사용자와 컨텐츠 프로바이더 사이에 존재하는 중개 시스템임&lt;/li&gt;
+  &lt;li&gt;사용자가 웹 서버에 요청을 하면 투명 프록시는 캐싱, 리디렉션 및 인증을 포함한 요청을 가로챔
+ &lt;img src=&quot;https://github.com/huvso/study/blob/master/proxy%20Server/img/01.png?raw=true&quot; align=&quot;center&quot; title=&quot;proxy 01&quot; alt=&quot;proxy 01&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;웹 프록시는 요청을 가로 채고, 필요한 경우 요청을 수정 한 다음 요청을 처리하거나 목적지로 전달함으로써 작동함&lt;/li&gt;
+  &lt;li&gt;서비스 공급자는 프록시를 사용하여 사용자가 서비스에 연결하는 방식을 형성하고 최적화 할 수 있음&lt;/li&gt;
+  &lt;li&gt;네트워크 공급자가 사용자 또는 직원이 외부 리소스에 액세스하는 방식에 영향을 줄 수 있음&lt;/li&gt;
+  &lt;li&gt;일반적으로 프록시는 사용자의 응용 프로그램 또는 네트워크 설정을 구성하여 액세스함&lt;/li&gt;
+  &lt;li&gt;투명 프록시를 사용하면 프록시는 대상으로 향하는 패킷을 가로 채서 요청을 가로 챌 수 있으므로 요청이 대상 자체에서 처리되는 것처럼 보임&lt;/li&gt;
+  &lt;li&gt;서비스 제공 업체는 사용자 컴퓨터를 재구성하지 않고도 프록시를 구현할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-transparent-proxies-work&quot;&gt;How Transparent Proxies work&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;투명 프록시는 사용자와 웹서비스 사이에서 중개자로서 활동한다&lt;/li&gt;
+  &lt;li&gt;사용자가 서비스에 연결 할 때 투명 프록시는 서비스 제공업체에 도착하기 전에 요청을 가로챈다&lt;/li&gt;
+  &lt;li&gt;투명 프록시는 사용자들이 이것을 알지 못하기 때문에 투명하게 간주된다&lt;/li&gt;
+  &lt;li&gt;반면에 서비스를 호스팅하는 서버는 프록시 트래픽이 사용자로 부터 직접적인게 아닌 프록시로 부터 오는 것을 인식한다
+    &lt;h4 id=&quot;use-of-transparent-proxies&quot;&gt;Use of Transparent Proxies&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;투명 프록시는 다양하다&lt;/li&gt;
+  &lt;li&gt;다음 목록에는 투명 프록시가 사용되는 일반적인 예이다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Proxy cache&lt;/strong&gt; : Proxy cache는 서버에 저장된 데이터의 복사본을 만들고 캐시 된 콘텐츠를 사용자에게 제공한다. 이렇게 하면 프록시가 서비스 자체 대신 콘텐츠를 제공하도록 함으로써 웹 서비스의 부담을 줄일 수 있다&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Filtering proxy&lt;/strong&gt; : Filtering proxy는 특정 웹 사이트 또는 웹 서비스에 대한 액세스를 차단한다. 이는 일반적으로 조직에서 관련이 없거나 조직에 지장이 없는 리소스에 사용자가 액세스하지 못하도록하기 위해 조직에서 구현한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gateway proxy&lt;/strong&gt; : Gateway proxy는 네트워크 트래픽을 수정하거나 차단한다. 공용 Wi-Fi를 제공하는 위치는 종종 사용자가 서비스를 사용하기 전에 계약을 등록하거나 수락해야하는 게이트웨이를 구현한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;example-of-a-transparent-proxy&quot;&gt;Example of a Transparent Proxy&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;스타 벅스 커피 하우스 사용자는 상점의 Wi-Fi 네트워크에 연결하려고 한다. 사용자가 웹 브라우저를 열면 모든 네트워크 통신을 관리하는 프록시 서버에 연결된다. 이것은 새로운 사용자이므로 프록시는 사용자에게 특정 이용 약관에 동의하도록 요청하는 웹 페이지를 브라우저에 표시한다. 사용자가 수락하면 프록시는 사용자의 트래픽을 실제 대상으로 라우팅한다.&lt;/li&gt;
+  &lt;li&gt;MaxCDN과 같은 콘텐츠 전달 네트워크는 대규모로 투명 프록시의 한 형태이다. CDN은 소스 시스템을 공개하거나 수정하지 않고도 캐싱, 중복성 및 속도 향상을 제공한다. 사용자는 서비스 제공 업체에 직접 연결한다고 생각하지만 모든 요청은 CDN에서 처리한다. 이것이 Google, Facebook 및 Twitter와 같은 서비스가 최소한의 중단 시간으로 수백만 건의 요청을 처리하는 방법이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;benefits-of-transparent-proxy&quot;&gt;Benefits of Transparent proxy&lt;/h3&gt;
+&lt;p&gt;투명 프록시는 사용자의 브라우징 경험에서 기능 및 feature들을 추가하는 괜찮은 방법이다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;기업&lt;/strong&gt;은 들어오는 요청을 라우팅 및 수정하여 고객이 서비스와 상호 작용하는 방식을보다 효과적으로 제어 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;사용자&lt;/strong&gt;는 연결이 프록시를 통해 원활하고 보이지 않게 전달되므로 서비스 공급자와 구성을 유지하면서 웹 서비스와보다 쉽게 상호 작용한다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;-
+  
+  
+  &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;forward-proxy&quot;&gt;Forward Proxy&lt;/h2&gt;
+&lt;h3 id=&quot;definition-1&quot;&gt;Definition&lt;/h3&gt;
+&lt;p&gt;클라이언트가 웹 서버에 접근 하려고 할 때 클라이언트의 요청이 웹서버에게 직접 전송되는 것이 아니고 중간에 Proxy 서버에게 전달되어 Proxy 서버는 그 요청을 웹 서버에게 전달하여 응답을 받아 오는 방식&lt;/p&gt;
+
+&lt;h3 id=&quot;use&quot;&gt;Use&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Content Filtering&lt;/li&gt;
+  &lt;li&gt;e-mail security&lt;/li&gt;
+  &lt;li&gt;NAT ing&lt;/li&gt;
+  &lt;li&gt;Compliance Reporting&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;-
+  
+  
+  &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reverse-proxy&quot;&gt;Reverse Proxy&lt;/h2&gt;
+&lt;h3 id=&quot;definition-2&quot;&gt;Definition&lt;/h3&gt;
+&lt;p&gt;클라이언트는 웹 서버의 주소가 아닌 Reverse Proxy로 설정된 주소로 요청을 하게 되고, Proxy 서버가 받아서 그 뒷단에 있는 웹 서버에게 다시 요청을 하는 방식으로 클라이언트는 진짜 웹 서버의 정보를 알 수가 없다&lt;/p&gt;
+
+&lt;h3 id=&quot;use-1&quot;&gt;Use&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Application Delivery including&lt;/li&gt;
+  &lt;li&gt;Load Balancing (TCP Multiplexing)&lt;/li&gt;
+  &lt;li&gt;SSL Offload/Acceleration (SSL Multiplexing)&lt;/li&gt;
+  &lt;li&gt;Caching&lt;/li&gt;
+  &lt;li&gt;Compression&lt;/li&gt;
+  &lt;li&gt;Content Switching/Redirection&lt;/li&gt;
+  &lt;li&gt;Application Firewall&lt;/li&gt;
+  &lt;li&gt;Server Obfuscation&lt;/li&gt;
+  &lt;li&gt;Authentication&lt;/li&gt;
+  &lt;li&gt;Single Sign On&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;-
+  
+  
+  &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;참고-url&quot;&gt;참고 URL&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://www.tecmint.com/install-squid-in-ubuntu/&lt;/li&gt;
+  &lt;li&gt;https://www.maxcdn.com/one/visual-glossary/transparent-proxy/&lt;/li&gt;
+  &lt;li&gt;https://www.clien.net/service/board/lecture/11500797&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="Infrastructure" /><category term="Proxy" /><summary type="html">What is Proxy 프록시 서버(Proxy Server) What is Proxy Server 사전적인 의미로는 ‘대리인’ 클라이언트가 자신을 통해서 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해 주는 컴퓨터나 응용 프로그램 서버와 클라이언트 사이에서 중계기로서 대리로 통신을 수행하는 기능을 가리켜 ‘프록시’, 그 중계 기능을 하는 것을 ‘프록시 서버’ 라고 부름 Advantage of Proxy Server 프록시 서버에 요청된 내용들을 캐시에 저장 후, 캐시 안에 있는 정보를 이용함으로써 불필요하게 외부와의 연결을 하지 않아 전송 시간을 절약 할 수 있음 외부와의 트래픽을 줄이게 됨으로써 네트워크 병목 현상을 방지하는 효과도 얻을 수 있음 Purpose of Proxy Server 캐시를 사용하여 리소스로의 접근 속도 향상 원하지 않는 사이트 차단 인터넷 이용률 기록, 검사 악의적인 의도로 바이러스, 악성 루머 전파 또는, 다른 정보들을 빼낼 목적 IP 추적을 방지 In/Out 콘텐츠 검사 우회 -       투명 프록시(Transparent Proxy) Definition 투명 프록시는 사용자와 컨텐츠 프로바이더 사이에 존재하는 중개 시스템임 사용자가 웹 서버에 요청을 하면 투명 프록시는 캐싱, 리디렉션 및 인증을 포함한 요청을 가로챔 &amp;lt;/img&amp;gt; Overview 웹 프록시는 요청을 가로 채고, 필요한 경우 요청을 수정 한 다음 요청을 처리하거나 목적지로 전달함으로써 작동함 서비스 공급자는 프록시를 사용하여 사용자가 서비스에 연결하는 방식을 형성하고 최적화 할 수 있음 네트워크 공급자가 사용자 또는 직원이 외부 리소스에 액세스하는 방식에 영향을 줄 수 있음 일반적으로 프록시는 사용자의 응용 프로그램 또는 네트워크 설정을 구성하여 액세스함 투명 프록시를 사용하면 프록시는 대상으로 향하는 패킷을 가로 채서 요청을 가로 챌 수 있으므로 요청이 대상 자체에서 처리되는 것처럼 보임 서비스 제공 업체는 사용자 컴퓨터를 재구성하지 않고도 프록시를 구현할 수 있음 How Transparent Proxies work 투명 프록시는 사용자와 웹서비스 사이에서 중개자로서 활동한다 사용자가 서비스에 연결 할 때 투명 프록시는 서비스 제공업체에 도착하기 전에 요청을 가로챈다 투명 프록시는 사용자들이 이것을 알지 못하기 때문에 투명하게 간주된다 반면에 서비스를 호스팅하는 서버는 프록시 트래픽이 사용자로 부터 직접적인게 아닌 프록시로 부터 오는 것을 인식한다 Use of Transparent Proxies 투명 프록시는 다양하다 다음 목록에는 투명 프록시가 사용되는 일반적인 예이다. Proxy cache : Proxy cache는 서버에 저장된 데이터의 복사본을 만들고 캐시 된 콘텐츠를 사용자에게 제공한다. 이렇게 하면 프록시가 서비스 자체 대신 콘텐츠를 제공하도록 함으로써 웹 서비스의 부담을 줄일 수 있다 Filtering proxy : Filtering proxy는 특정 웹 사이트 또는 웹 서비스에 대한 액세스를 차단한다. 이는 일반적으로 조직에서 관련이 없거나 조직에 지장이 없는 리소스에 사용자가 액세스하지 못하도록하기 위해 조직에서 구현한다. Gateway proxy : Gateway proxy는 네트워크 트래픽을 수정하거나 차단한다. 공용 Wi-Fi를 제공하는 위치는 종종 사용자가 서비스를 사용하기 전에 계약을 등록하거나 수락해야하는 게이트웨이를 구현한다. Example of a Transparent Proxy 스타 벅스 커피 하우스 사용자는 상점의 Wi-Fi 네트워크에 연결하려고 한다. 사용자가 웹 브라우저를 열면 모든 네트워크 통신을 관리하는 프록시 서버에 연결된다. 이것은 새로운 사용자이므로 프록시는 사용자에게 특정 이용 약관에 동의하도록 요청하는 웹 페이지를 브라우저에 표시한다. 사용자가 수락하면 프록시는 사용자의 트래픽을 실제 대상으로 라우팅한다. MaxCDN과 같은 콘텐츠 전달 네트워크는 대규모로 투명 프록시의 한 형태이다. CDN은 소스 시스템을 공개하거나 수정하지 않고도 캐싱, 중복성 및 속도 향상을 제공한다. 사용자는 서비스 제공 업체에 직접 연결한다고 생각하지만 모든 요청은 CDN에서 처리한다. 이것이 Google, Facebook 및 Twitter와 같은 서비스가 최소한의 중단 시간으로 수백만 건의 요청을 처리하는 방법이다. Benefits of Transparent proxy 투명 프록시는 사용자의 브라우징 경험에서 기능 및 feature들을 추가하는 괜찮은 방법이다. 기업은 들어오는 요청을 라우팅 및 수정하여 고객이 서비스와 상호 작용하는 방식을보다 효과적으로 제어 할 수 있다. 사용자는 연결이 프록시를 통해 원활하고 보이지 않게 전달되므로 서비스 공급자와 구성을 유지하면서 웹 서비스와보다 쉽게 상호 작용한다. -       Forward Proxy Definition 클라이언트가 웹 서버에 접근 하려고 할 때 클라이언트의 요청이 웹서버에게 직접 전송되는 것이 아니고 중간에 Proxy 서버에게 전달되어 Proxy 서버는 그 요청을 웹 서버에게 전달하여 응답을 받아 오는 방식 Use Content Filtering e-mail security NAT ing Compliance Reporting -       Reverse Proxy Definition 클라이언트는 웹 서버의 주소가 아닌 Reverse Proxy로 설정된 주소로 요청을 하게 되고, Proxy 서버가 받아서 그 뒷단에 있는 웹 서버에게 다시 요청을 하는 방식으로 클라이언트는 진짜 웹 서버의 정보를 알 수가 없다 Use Application Delivery including Load Balancing (TCP Multiplexing) SSL Offload/Acceleration (SSL Multiplexing) Caching Compression Content Switching/Redirection Application Firewall Server Obfuscation Authentication Single Sign On -       참고 URL https://www.tecmint.com/install-squid-in-ubuntu/ https://www.maxcdn.com/one/visual-glossary/transparent-proxy/ https://www.clien.net/service/board/lecture/11500797</summary></entry><entry><title type="html">데이터베이스 Transaction ACID</title><link href="http://localhost:4000/2020/07/02/database-transaction-acid.html" rel="alternate" type="text/html" title="데이터베이스 Transaction ACID" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/database%20transaction%20acid</id><content type="html" xml:base="http://localhost:4000/2020/07/02/database-transaction-acid.html">&lt;h1 id=&quot;데이터베이스-transaction-acid&quot;&gt;데이터베이스 Transaction ACID&lt;/h1&gt;
+
+&lt;p&gt;트랜잭션의 속성을 뜻하는 ACID는 그 속성의 영어 첫 철자를 따서 붙인 이름이다.
+그 내용은 다음과 같다.&lt;/p&gt;
+
+&lt;h2 id=&quot;automicity--원자성&quot;&gt;&lt;strong&gt;Automicity&lt;/strong&gt; : 원자성&lt;/h2&gt;
+
+&lt;p&gt;하나의 트랜잭션이 완료가 되었을 때는 트랜잭션의 처리가 완료 된 상태이거나 트랜잭션을 받아 들이기 전의 상태여야 한다.&lt;/p&gt;
+
+&lt;p&gt;즉, 트랜잭션이 완벽하게 수행이 되든 트랜잭션에서 오류가 나든 수행 트랜잭션의 부분적인 변동 사항은 인정이 되지 않는다는 뜻이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;consistency--일관성&quot;&gt;&lt;strong&gt;Consistency&lt;/strong&gt; : 일관성&lt;/h2&gt;
+
+&lt;p&gt;트랜잭션의 성립, 미성립에 불문하고 데이터의 내용은 일관성이 유지 되어야 한다.&lt;/p&gt;
+
+&lt;p&gt;즉, 하나의 DB 서버를 사용하고 있는 무수한 클라이언트들이 동시에 트랜잭션을 보낸다 할지라도, 혹은 그 트랜잭션들이 무수한 오류와 성공의 반복이 되더라도 데이터들의 값은 누가 보든간에 일관성이 유지 되어야 한다는 것이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;isolation--격리성&quot;&gt;&lt;strong&gt;Isolation&lt;/strong&gt; : 격리성&lt;/h2&gt;
+
+&lt;p&gt;트랜잭션 간에 독립성이 유지 되어야 한다는 뜻이다.&lt;/p&gt;
+
+&lt;p&gt;즉, A라는 트랜잭션이 수행에 있을 때는 B라는 트랜잭션이 그 수행과정에 끼어들어 데이터의 처리를 할 수 없다는 것이다. 이는 통합 DB 서버를 사용하는 클라이언트들의 수가 많아지면 많아 질 수록 중요한 속성이라 할 수 있겠다.&lt;/p&gt;
+
+&lt;p&gt;예를 들어 A라는 사람이 데이터 값을 출력하는 트랜잭션을 수행하고 B라는 사람이 데이터를 수정하는 트랜잭션을 수행한다고 할 때, A가 요청 한 트랜잭션 내에 B가 요청한 트랜잭션이 관여를 하게 된다면 A 트랜잭션의 응답 값이 변동이 되기 때문에 결과적으로는 트랜잭션의 일관성에 문제가 있을 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;durability--영속성&quot;&gt;&lt;strong&gt;Durability&lt;/strong&gt; : 영속성&lt;/h2&gt;
+
+&lt;p&gt;트랜잭션이 종료한 후에는 논리적인 장애나 오류등으로 데이터 내용, 그 값이 변하지 않아야 한다.&lt;/p&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="Database" /><summary type="html">데이터베이스 Transaction ACID 트랜잭션의 속성을 뜻하는 ACID는 그 속성의 영어 첫 철자를 따서 붙인 이름이다. 그 내용은 다음과 같다. Automicity : 원자성 하나의 트랜잭션이 완료가 되었을 때는 트랜잭션의 처리가 완료 된 상태이거나 트랜잭션을 받아 들이기 전의 상태여야 한다. 즉, 트랜잭션이 완벽하게 수행이 되든 트랜잭션에서 오류가 나든 수행 트랜잭션의 부분적인 변동 사항은 인정이 되지 않는다는 뜻이다. Consistency : 일관성 트랜잭션의 성립, 미성립에 불문하고 데이터의 내용은 일관성이 유지 되어야 한다. 즉, 하나의 DB 서버를 사용하고 있는 무수한 클라이언트들이 동시에 트랜잭션을 보낸다 할지라도, 혹은 그 트랜잭션들이 무수한 오류와 성공의 반복이 되더라도 데이터들의 값은 누가 보든간에 일관성이 유지 되어야 한다는 것이다. Isolation : 격리성 트랜잭션 간에 독립성이 유지 되어야 한다는 뜻이다. 즉, A라는 트랜잭션이 수행에 있을 때는 B라는 트랜잭션이 그 수행과정에 끼어들어 데이터의 처리를 할 수 없다는 것이다. 이는 통합 DB 서버를 사용하는 클라이언트들의 수가 많아지면 많아 질 수록 중요한 속성이라 할 수 있겠다. 예를 들어 A라는 사람이 데이터 값을 출력하는 트랜잭션을 수행하고 B라는 사람이 데이터를 수정하는 트랜잭션을 수행한다고 할 때, A가 요청 한 트랜잭션 내에 B가 요청한 트랜잭션이 관여를 하게 된다면 A 트랜잭션의 응답 값이 변동이 되기 때문에 결과적으로는 트랜잭션의 일관성에 문제가 있을 수 있다. Durability : 영속성 트랜잭션이 종료한 후에는 논리적인 장애나 오류등으로 데이터 내용, 그 값이 변하지 않아야 한다.</summary></entry><entry><title type="html">PostgreSQL Index Type</title><link href="http://localhost:4000/2020/07/02/postgresql-index-type.html" rel="alternate" type="text/html" title="PostgreSQL Index Type" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/postgresql%20index%20type</id><content type="html" xml:base="http://localhost:4000/2020/07/02/postgresql-index-type.html">&lt;h1 id=&quot;postgresql-index-type&quot;&gt;postgreSQL Index Type&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Version Info : PostgreSQL(Ver 9.6)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;B-tree
+    &lt;ul&gt;
+      &lt;li&gt;Default Tree 방식
+ &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;hash
+    &lt;ul&gt;
+      &lt;li&gt;동등 비교 최적화
+ &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GiST(Generalized Search Tree)
+    &lt;ul&gt;
+      &lt;li&gt;지역 분석 최적화&lt;/li&gt;
+      &lt;li&gt;참조: https://www.postgresql.org/docs/9.2/static/gist.html
+ &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GIN(Generalized Inverted Index)
+    &lt;ul&gt;
+      &lt;li&gt;여러값을 하나의 Row에 맵핑(Arrays and full-text searchs 이용)&lt;/li&gt;
+      &lt;li&gt;참조: https://www.postgresql.org/docs/9.2/static/gin.html
+ &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SP-GiST(Space-Partitioning Generalized Search Tree)
+    &lt;ul&gt;
+      &lt;li&gt;인-메모리 최적화, 파티셔닝 구조가&lt;/li&gt;
+      &lt;li&gt;참조: PostgreSQL: https://www.postgresql.org/docs/9.2/static/spgist.html&lt;/li&gt;
+      &lt;li&gt;참조: http://www.sai.msu.su/~megera/wiki/spgist_dev
+ &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BRIN(Block Range INdex)
+    &lt;ul&gt;
+      &lt;li&gt;사이즈가 제한된 큰 데이터 사용 시 최적&lt;/li&gt;
+      &lt;li&gt;참조: https://www.postgresql.org/docs/9.6/static/brin.html&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="PostgreSQL" /><summary type="html">postgreSQL Index Type Version Info : PostgreSQL(Ver 9.6) B-tree Default Tree 방식   hash 동등 비교 최적화   GiST(Generalized Search Tree) 지역 분석 최적화 참조: https://www.postgresql.org/docs/9.2/static/gist.html   GIN(Generalized Inverted Index) 여러값을 하나의 Row에 맵핑(Arrays and full-text searchs 이용) 참조: https://www.postgresql.org/docs/9.2/static/gin.html   SP-GiST(Space-Partitioning Generalized Search Tree) 인-메모리 최적화, 파티셔닝 구조가 참조: PostgreSQL: https://www.postgresql.org/docs/9.2/static/spgist.html 참조: http://www.sai.msu.su/~megera/wiki/spgist_dev   BRIN(Block Range INdex) 사이즈가 제한된 큰 데이터 사용 시 최적 참조: https://www.postgresql.org/docs/9.6/static/brin.html</summary></entry><entry><title type="html">PostgreSQL 버전별 psql 접근</title><link href="http://localhost:4000/2020/07/02/postgresql-psql-by-version.html" rel="alternate" type="text/html" title="PostgreSQL 버전별 psql 접근" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/postgresql%20psql%20by%20version</id><content type="html" xml:base="http://localhost:4000/2020/07/02/postgresql-psql-by-version.html">&lt;h1 id=&quot;postgresql-버전별-psql-접근&quot;&gt;PostgreSQL 버전별 psql 접근&lt;/h1&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;postgreSQL의 버전별 호환성에 대한 테스트가 필요한 경우가 있다.&lt;/li&gt;
+  &lt;li&gt;물리적으로 하나로 구성된 서버에 여러 버전의 postgreSQL를 설치하는것이 서버 리소스관리나 테스트 환경에서 접근이 편리하다.&lt;/li&gt;
+  &lt;li&gt;각 버전별 포트를 달리하여 Connection 정보를 구분할 수 있음&lt;/li&gt;
+  &lt;li&gt;각 버전별 서비스를 구동할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;postgresql-home-directory&quot;&gt;PostgreSQL Home directory&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;일반적으로 postgreSQL의 Home Directory는 다음과 같음
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; /etc/postgesql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;여러버전이-존재하는-경우&quot;&gt;여러버전이 존재하는 경우&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;postgresql은 home directory에 버전별로 directory 구조를 관리함&lt;/li&gt;
+  &lt;li&gt;예시는 다음과 같음
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; drwxr-xr-x   3 postgres postgres  4096 11월 19  2018 9.6/
+ drwxr-xr-x   3 postgres postgres  4096  3월 18 09:14 10/
+ drwxr-xr-x   3 postgres postgres  4096  1월 18 10:42 11/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;각 버전 별로는 하위에 main directory가 존재하며 각 버전 별 환경설정 파일이 존재함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;postgresql-버전별-psql-접근-방법&quot;&gt;PostgreSQL 버전별 psql 접근 방법&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;위 내용에서 postgreSQL의 디렉토리 구조를 설명한 것은 버전 별 postgreSQL 접근 방법이 postgreSQL의 디렉토리 구조와 연관이 있기 때문&lt;/li&gt;
+  &lt;li&gt;각 버전 별 psql 접근 방법은 다음과 같이 명령어를 수행 할 수 있음
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; psql --cluster 10/main
+ psql --cluster 11/main
+ psql --cluster 9.6/main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;psql 명령어 수행 시 환경변수에 정의된 postgreSQL 디렉토리를 참조하고 –cluster 명령어를 통해 실행하고자 하는 버전을 명시 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="PostgreSQL" /><summary type="html">PostgreSQL 버전별 psql 접근 개요 postgreSQL의 버전별 호환성에 대한 테스트가 필요한 경우가 있다. 물리적으로 하나로 구성된 서버에 여러 버전의 postgreSQL를 설치하는것이 서버 리소스관리나 테스트 환경에서 접근이 편리하다. 각 버전별 포트를 달리하여 Connection 정보를 구분할 수 있음 각 버전별 서비스를 구동할 수 있음 PostgreSQL Home directory 일반적으로 postgreSQL의 Home Directory는 다음과 같음 /etc/postgesql 여러버전이 존재하는 경우 postgresql은 home directory에 버전별로 directory 구조를 관리함 예시는 다음과 같음 drwxr-xr-x 3 postgres postgres 4096 11월 19 2018 9.6/ drwxr-xr-x 3 postgres postgres 4096 3월 18 09:14 10/ drwxr-xr-x 3 postgres postgres 4096 1월 18 10:42 11/ 각 버전 별로는 하위에 main directory가 존재하며 각 버전 별 환경설정 파일이 존재함 PostgreSQL 버전별 psql 접근 방법 위 내용에서 postgreSQL의 디렉토리 구조를 설명한 것은 버전 별 postgreSQL 접근 방법이 postgreSQL의 디렉토리 구조와 연관이 있기 때문 각 버전 별 psql 접근 방법은 다음과 같이 명령어를 수행 할 수 있음 psql --cluster 10/main psql --cluster 11/main psql --cluster 9.6/main psql 명령어 수행 시 환경변수에 정의된 postgreSQL 디렉토리를 참조하고 –cluster 명령어를 통해 실행하고자 하는 버전을 명시 할 수 있음</summary></entry><entry><title type="html">Python Type Checking</title><link href="http://localhost:4000/2020/07/01/python-type-checking.html" rel="alternate" type="text/html" title="Python Type Checking" /><published>2020-07-01T00:00:00+09:00</published><updated>2020-07-01T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/01/python%20type%20checking</id><content type="html" xml:base="http://localhost:4000/2020/07/01/python-type-checking.html">&lt;h1 id=&quot;python-type-checkingguide--20200408&quot;&gt;Python Type Checking(Guide) – 20200408&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Reference: &lt;a href=&quot;https://realpython.com/python-type-checking/&quot;&gt;https://realpython.com/python-type-checking/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;DuckTyping Wiki: &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%8D%95_%ED%83%80%EC%9D%B4%ED%95%91&quot;&gt;https://ko.wikipedia.org/wiki/%EB%8D%95_%ED%83%80%EC%9D%B4%ED%95%91&lt;/a&gt;&lt;/li&gt;
@@ -428,4 +943,83 @@ Type checking은 개발자로서의 삶을 더 낫고 편리하게 만들기 위
 
 &lt;p&gt;이 가이드의 나머지 부분에서는 정적 타입 체커를 실행하는 방법(특히 MyPy에 관하여), Type hint 없는 라이브러리를 사용한 코드에서 Type을 체크하는 방법, 그리고 runtime 시 annotation 사용 방법 에 대해 자세히 다룰 것이다.&lt;/p&gt;
 
-&lt;h1 id=&quot;annotations&quot;&gt;Annotations&lt;/h1&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="Python" /><summary type="html">Python Type Checking(Guide) – 20200408 Reference: https://realpython.com/python-type-checking/ DuckTyping Wiki: https://ko.wikipedia.org/wiki/%EB%8D%95_%ED%83%80%EC%9D%B4%ED%95%91 Contents 1. Type Systems 1-1 Dynamic Typing 1-2 Static Typing 1-3 Duck Typing 2. Hello Types 3. Pros and Cons 4. Annotations 4-1 Function Annotations 4-2 Variable Annotations 4-3 Type Comments 4-4 So, Type Annotations or Type Comments? 5. Playing With Python Types, Part 1 5-1 Example: A Deck of Cards 5-2 Sequences and Mappings 5-3 Type Aliases 5-4 Functions Without Return Values 5-5 Example: Play Some Cards 5-6 The Any Type 6. Type Theory 6-1 Subtypes 6-2 Covariant, Contravariant, and Invariant 6-3 Gradual Typing and Consistent Types 7. Playing With Python Types, Part 2 7-1 Type Variables 7-2 Duck Types and Protocols 7-3 The Optional Type 7-4 Example: The Object(ive) of the Game 7-5 Type Hint for Methods 7-6 Classes as Types 7-7 Returning self or cls 7-8 Annotating *args and **kwargs 7-9 Callables 7-10 Example: Hearts 8. Static Type Checking 8-1 The Mypy Project 8-2 Running Mypy 8-3 Adding Stubs 8-4 Typeshed 8-5 Other Static Type Checkers 8-6 Using Types at Runtime 9. Conclusion Object - Type annotations and type hint · 타입에 대한 주석과 힌트 - Adding static types to code, both your code adn the code of others · 모든 코드에 정적 타입 추가 - Running a static type checker · 정적 타입 체커 실행 - Enforcing types at runtime · 런타임에 타입 적용 1. Type Systems 모든 프로그래밍 언어는 각 각의 다른 타입 시스템을 포함하고 있다. 1-1. Dynamic Typing Python은 동적 타입 언어이다. 이것은 Python 인터프리터가 오직 코드가 실행 될 때 타입 체킹을 한 다는 것과 실행 시간 동안 변수의 타입이 변경 될 수 있음을 의미한다. 다음의 예가 Python의 동적 타입을 증명한다 if False: 1 + &quot;two&quot; # This line never runs, so no TypeError is raised else: 1 + 2 # result: 3 1 + &quot;two&quot; # Now this is type checked, and a TypeError is raised # result: TypeError: unsupported operand type(s) for +: 'int' and 'str' 첫 번째 예에서 1 + “two”가 절대 실행되지 않으면 절대 타입은 체크되지 않는다. 두 번째 예에서 Python에서 당신은 integer형과 string형을 결합할 수 없으므로, 1 + “two”가 실행될 때 TypeError가 발생된다. 다음으로, 변수가 타입을 변경 할 수 있는지 알아보자. thing = &quot;Hello&quot; print(type(thing)) # result: &amp;lt;class 'str'&amp;gt; thing = 28.1 print(type(thing)) # result: &amp;lt;class 'float'&amp;gt; type()은 객체의 타입을 반환한다. 이 예에서 thing의 타입은 변경 될 수 있음을 확인 할 수 있으며, Python은 정확하게 타입이 변경 되었음을 인지한다. 1-2. Static Typing 정적 타입은 동적 타입과 정반대 되는 개념이다. 정적 타입은 프로그램이 실행되지 않아도 타입 체킹이 수행된다. C와 Java 같은 정적 타입 언어들은 당신의 프로그램이 컴파일 될 때 타입 체킹이 수행된다. 비록 다른 타입의 변수를 캐스팅하는 메커니즘이 있을 수 있으나 정적 타입에서 변수들은 일반적으로 타입이 변경되지 않는다. 정적 타입 언어의 간단한 예제를 살펴보자. 다음은 Java 코드의 한 부분이다. String thing; thing = &quot;Hello&quot;; 첫 번째 줄은 컴파일 시 thing이라는 이름의 변수가 String 타입으로 바인딩 되었음을 선언하였다. 해당 변수는 다른 타입으로 결코 재 바인딩 될 수 없다. 두 번째 줄에서 thing은 값을 할당 받았다. 이것은 String 객체 외의 값들이 절대 선언될 수 없다. 예를 들어서 만약 당신이 thing = 28.1f으로 선언하면 컴파일러는 양립될 수 없는 타입 때문에 에러를 발생시킬 것이다. Python은 항상 동적으로 타이핑 된 언어로 남을 것이다. 하지만, PEP 484는 Python 코드에서도 정적 타입 체킹을 가능하도록 하는 Type hint를 소개한다. 대부분의 정적 타입 언어들에서 타입이 작동하는 방식과 달리, Type hint는 스스로 Python이 타입을 강제하도록 하는 것은 아니다. 이름에서 알 수 있듯이 Type hint는 단지 타입을 제안한다. Type hint를 활용한 정적 유형 검사를 수행하는 다른 도구들을 나중에 소개하도록 하겠다. 1-3. Duck Typping(다른 설명으로 대체함) Python에 대해 이야기 할 때 자주 쓰이는 또 다른 용어는 Duck Typing이다. 이 용어는 “오리처럼 걷고 오리처럼 꽥꽥거리면 오리임에 틀림없다”는 말에서 유래되었다. 객체가 실행이 된 시점에서 해당 method와 attribute를 확인하여 객체의 타입을 확인한다. 덕 타이핑(Duck Typing)이란? class Duck: def quack(self): print('꽥꽥') def feathuers(self): print('오리에게 흰색, 회색 깃털이 있습니다.') def fly(self): print('오리가 날았지만 곧 떨어집니다.') class Person: def quack(self): print('이 사람이 오리를 흉내냅니다.') def feathuers(self): print('사람은 바닥에서 깃털을 주어서 보여줍니다.') def in_the_forest(duck): duck.quack() duck.feathuers() duck.fly() def game(): donald = Duck() john = Person() in_the_forest(donald) in_the_forest(john) if __name__ == &quot;__main__&quot;: game() # result: # 꽥꽥 # 오리에게 흰색, 회색 깃털이 있습니다. # 오리가 날았지만 곧 떨어집니다. # 이 사람이 오리를 흉내냅니다. # 사람은 바닥에서 깃털을 주어서 보여줍니다. # AttributeError: 'Person' object has no attribute 'fly' class Duck과 Person은 quack()와 feathuers()의 동일 method를 가지고 있지만. Person class의 경우 fly() method를 가지고 있지 않기 때문에 AttributeError가 발생한다. 이러한 duck typing의 경우 타입에 대해 매우 자유롭게 작성 할 수 있다. 하지만 코드 실행 시 자료형 오류나 선언되지 않은 method나 attribute를 찾지 못해 오류가 발생할 수 있다. 이러한 문제들은 개발이 어느 정도 진행 된 뒤 발생 될 가능성이 크며, 해당 오류를 찾는 것이 쉽지 않다. «««&amp;lt; HEAD 2. Hello Types 이번 장에서는 Type hint를 function에 어떻게 추가 하는지 알아 볼 것이다. 다음의 function은 첫 글자를 대문자화 해주고 장식 라인을 추가하여 텍스트 문자열을 헤드라인 형태로 바꾼다. def headline(text, align=True): if align: return f&quot;{text.title()}\n{'-' * len(text)}&quot; else: return f&quot; {text.title()} &quot;.center(50, &quot;o&quot;) print(headline(&quot;python type checking&quot;)) # result: # Python Type Checking # -------------------- print(headline(&quot;python type checking&quot;, align=False)) # oooooooooooooo Python Type Checking oooooooooooooo 해당 function은 기본적으로 밑줄과 왼쪽 정렬된 헤드라인을 반환한다. 정렬 플래그를 False로 설정하면 o에 감싸져서 중앙에 위치된 헤드라인을 반환하도록 할 수 있다. function에 대한 타입을 추가하려면 다음과 같이 인수 및 변환 값에 annotation을 달기만 하면 된다. def headline2(text: str, align: bool = True) -&amp;gt; str: if align: return f&quot;{text.title()}\n{'-' * len(text)}&quot; else: return f&quot; {text.title()} &quot;.center(50, &quot;o&quot;) text: str 구문은 text 인수는 str 타입이어야 한다고 말한다. 마찬가지로, 선택적 align 인수는 default를 True의 bool 타입을 가져야 한다. 마지막으로, -&amp;gt; str 구문은 headline2()가 문자열을 반환함을 명시하고 있다. PEP 8은 다음과 같은 구문을 추천한다 콜론에 대한 기본 규칙은 콜론 앞에는 빈공간을 두지 않고 뒤에는 한 공간을 둔다: text: str = 기호 양 옆에는 공백을 사용하도록 한다: align: bool = True -&amp;gt; 화살표 양 옆에는 공백을 사용하도록 한다: def headline2(…) -&amp;gt; str 이와 같은 Type hint를 추가하는 것은 런타임 효과가 없다. 즉, 그것들은 힌트일 뿐 스스로 시행되지 않는다. 예를 들어, align 인수에 잘못된 유형을 사용하더라도 코드는 문제나 경고 없이 계속 실행된다. print(headline2(&quot;python type checking&quot;, align=&quot;left&quot;)) # reulst: # Python Type Checking # -------------------- 위와 같은 종류의 오류를 잡기 위해서 static type checker를 사용할 수 있다. static type checker는 코드가 직접적으로 실행 되지 않아도 타입을 체크 해주는 도구이다. pycharm과 같은 IDE에서는 이미 type checker가 내장되어 있을 수 있다. 타입 체킹을 위한 가장 일반적인 도구는 Mypy이다. 이 챕터에서는 Mypy에 대한 간단한 설명만을 진행하며, 차 후에 Mypy에 대한 자세한 설명을 할 것이다. 만약 당신의 시스템에 Mypy가 설치되어 있지 않다면 pip를 활용하여 설치 할 수 있다. pip install mypy 2-2. mypy_test.py 파일에 다음의 코드를 입력하라. # 2-2. mypy_test.py def headline(text: str, align: bool = True) -&amp;gt; str: if align: return f&quot;{text.title()}\n{'-' * len(text)}&quot; else: return f&quot; {text.title()} &quot;.center(50, &quot;o&quot;) print(headline(&quot;python type checking&quot;)) print(headline(&quot;use mypy&quot;, align=&quot;center&quot;)) 이것은 앞에서 본 코드들과 본질적으로 같은 코드이다. 이제 다음의 코드로 mypy를 실행해보자. mypy '.\2-2. mypy_test.py' # result: 2-2. mypy_test.py:10: error: Argument &quot;align&quot; to &quot;headline&quot; has incompatible type &quot;str&quot;; expected &quot;bool&quot; Found 1 error in 1 file (checked 1 source file) Type hint를 바탕으로 Mypy는 위 코드에서 10번 라인에서 잘못된 타입을 사용하고 있음을 알려준다. 3. Pros and Cons(장·단점) 앞 섹션에서 파이썬에서 type checking이 어떻게 이루어지는지 맛을 보았다. 또한 코드에 type을 추가하는 장정 중 하나인 Type hint가 특정 오류를 파악하는데 도움이 된다는 예제를 살펴보았다. 그 밖의 장점으로는 다음과 같다. Type hint는 당신의 코드를 문서화하는데 도움이 된다. 전통적으로 함수의 인수에 대해 예상되는 유형을 문서화하려면 docstring을 사용했을 것이다. 이것은 효과가 있지만 docstring에 대한 기준이 없기 때문에(PEP 257에도 불구하고) 그것들은 자동 점검에 쉽게 사용될 수 없다. Type hint는 IDE들과 linter들의 성능을 향상시킨다. 이것들은 당신의 코드에 대한 정적 분석을 훨씬 쉽게 만들어준다. 이는 IDE가 더 나은 코드 완성 및 유사한 기능을 제공 할 수 있게 한다. Type annotation을 통해 PyCharm은 텍스트가 문자임을 알고 이를 바탕으로 구체적인 제안을 할 수 있다. Type hint는 보다 명확한 아키텍처를 구축하고 유지 관리하는데 도움이 된다. Type hint를 사용하는 행위는 당신의 프로그램의 Type에 대해 생각하도록 강요한다. Python의 역동적인 특성이 큰 자산 중 하나이지만, Duck Typing이나 Overload method들, 또는 복수 Return type에 대해 의식하는 것은 좋은 일이다. 물론 정적 Type checking이 다 좋은 것은 아니다. 개발자가 고려해야 할 단점 또한 있다. Type hint는 개발자의 시간과 노력이 더해져야 한다. 비록 그것이 디버깅하는데 더 적은 시간을 소비할 수 있게 하더라도, 그것은 좀 더 많은 코드를 입력하기 위해 더 많은 시간을 할애 할 것이다. Type hint는 Modern Python에 적합하다. Annotation은 Python 3.0에서 소개 되었으며, Python 2.7에서는 Type comment를 사용할 수 없다. 그러나 ‘Variable annotation’과 ‘Postponed evaluation of type hint’와 같은 개선은 당신이 Python 3.6 또는 3.7을 사용하여 Type cheking을 좀 더 잘 할 수 있다는 것을 의미한다. Type hint는 시동 시 약간의 패널티가 있다. Typing Module을 사용해야 하는 경우 특히 짧은 스크립트에서 import 시간이 상당히 걸릴 수 있다. // TODO - Measureing Import Time 그래서 당신은 당신의 코드에 있는 정적 타입 체크를 사용해야 하는가? 다행히도 Python은 gradual typing의 개념을 제공한다. 이것은 당신이 점진적으로 당신의 코드에 Type을 도입할 수 있다는 것을 의미한다. Type hint가 없는 코드는 static type checker에 의해 무시된다. 따라서, 중요한 구성 요소에 Type을 추가하기 시작하고 해당 구성 요소가 가치가 있다면 Type 추가를 계속 진행 할 수 있다. 위의 장·단점을 살펴보면 Type을 추가하는 것은 실행 중인 프로그램이나 프로그램 사용자에게 아무런 영향을 미치지 않는다는 것을 알 수 있다. Type checking은 개발자로서의 삶을 더 낫고 편리하게 만들기 위한 것이다. 프로젝트에 Type을 추가할 지 여부에 대한 몇 가지 규칙은 다음과 같다. Python을 배우기 시작한 지 얼마 안 된 사람이라면 더 많은 경험이 있을 때까지 Type hint의 사용을 자제하라. Type hint는 짤은 일회용 스크립트에서는 거의 사용되지 않는다. 다른 사람이 사용할 라이브러리, 특히 PyPy에 게시된 라이브러리에서 Type hint는 많은 가치를 추가한다. 당신의 라이브러리들을 사용하는 다른 코드들은 적절하게 Type을 체크하기 위해서 이러한 Type hint들을 필요로 한다. Type hint를 사용하는 프로젝트로 cursive_re, black, Real Python Reader, Mypy 가 있다 더 큰 프로젝트에서 Type hint를 입력하면 코드가 어떻게 흐르는지 이해하는 데 도움이 되며 매우 권장된다. 당신이 다른 사람들과 협력하는 프로젝트에서는 더욱 사용이 권장된다. Bernát Gábor의 “The State of Type Hints in Python” 글에서 “Type hint는 unit test에서 작성될 만한 가치가 있을 때마다 사용해야한다.“고 권고하였다. 실제로 Type hint는 코드에서 테스트와 유사한 역할을 한고, 테스트는 개발자가 더 나은 코드를 작성하는데 도움을 준다. 이제 Python에서 Type checking이 어떻게 작동하는지, 그리고 자신의 프로젝트에서 채택하고 싶은 것인지에 대해 생각해보자. 이 가이드의 나머지 부분에서는 정적 타입 체커를 실행하는 방법(특히 MyPy에 관하여), Type hint 없는 라이브러리를 사용한 코드에서 Type을 체크하는 방법, 그리고 runtime 시 annotation 사용 방법 에 대해 자세히 다룰 것이다. Annotations</summary></entry></feed>
+&lt;h1 id=&quot;annotations&quot;&gt;Annotations&lt;/h1&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="Python" /><summary type="html">Python Type Checking(Guide) – 20200408 Reference: https://realpython.com/python-type-checking/ DuckTyping Wiki: https://ko.wikipedia.org/wiki/%EB%8D%95_%ED%83%80%EC%9D%B4%ED%95%91 Contents 1. Type Systems 1-1 Dynamic Typing 1-2 Static Typing 1-3 Duck Typing 2. Hello Types 3. Pros and Cons 4. Annotations 4-1 Function Annotations 4-2 Variable Annotations 4-3 Type Comments 4-4 So, Type Annotations or Type Comments? 5. Playing With Python Types, Part 1 5-1 Example: A Deck of Cards 5-2 Sequences and Mappings 5-3 Type Aliases 5-4 Functions Without Return Values 5-5 Example: Play Some Cards 5-6 The Any Type 6. Type Theory 6-1 Subtypes 6-2 Covariant, Contravariant, and Invariant 6-3 Gradual Typing and Consistent Types 7. Playing With Python Types, Part 2 7-1 Type Variables 7-2 Duck Types and Protocols 7-3 The Optional Type 7-4 Example: The Object(ive) of the Game 7-5 Type Hint for Methods 7-6 Classes as Types 7-7 Returning self or cls 7-8 Annotating *args and **kwargs 7-9 Callables 7-10 Example: Hearts 8. Static Type Checking 8-1 The Mypy Project 8-2 Running Mypy 8-3 Adding Stubs 8-4 Typeshed 8-5 Other Static Type Checkers 8-6 Using Types at Runtime 9. Conclusion Object - Type annotations and type hint · 타입에 대한 주석과 힌트 - Adding static types to code, both your code adn the code of others · 모든 코드에 정적 타입 추가 - Running a static type checker · 정적 타입 체커 실행 - Enforcing types at runtime · 런타임에 타입 적용 1. Type Systems 모든 프로그래밍 언어는 각 각의 다른 타입 시스템을 포함하고 있다. 1-1. Dynamic Typing Python은 동적 타입 언어이다. 이것은 Python 인터프리터가 오직 코드가 실행 될 때 타입 체킹을 한 다는 것과 실행 시간 동안 변수의 타입이 변경 될 수 있음을 의미한다. 다음의 예가 Python의 동적 타입을 증명한다 if False: 1 + &quot;two&quot; # This line never runs, so no TypeError is raised else: 1 + 2 # result: 3 1 + &quot;two&quot; # Now this is type checked, and a TypeError is raised # result: TypeError: unsupported operand type(s) for +: 'int' and 'str' 첫 번째 예에서 1 + “two”가 절대 실행되지 않으면 절대 타입은 체크되지 않는다. 두 번째 예에서 Python에서 당신은 integer형과 string형을 결합할 수 없으므로, 1 + “two”가 실행될 때 TypeError가 발생된다. 다음으로, 변수가 타입을 변경 할 수 있는지 알아보자. thing = &quot;Hello&quot; print(type(thing)) # result: &amp;lt;class 'str'&amp;gt; thing = 28.1 print(type(thing)) # result: &amp;lt;class 'float'&amp;gt; type()은 객체의 타입을 반환한다. 이 예에서 thing의 타입은 변경 될 수 있음을 확인 할 수 있으며, Python은 정확하게 타입이 변경 되었음을 인지한다. 1-2. Static Typing 정적 타입은 동적 타입과 정반대 되는 개념이다. 정적 타입은 프로그램이 실행되지 않아도 타입 체킹이 수행된다. C와 Java 같은 정적 타입 언어들은 당신의 프로그램이 컴파일 될 때 타입 체킹이 수행된다. 비록 다른 타입의 변수를 캐스팅하는 메커니즘이 있을 수 있으나 정적 타입에서 변수들은 일반적으로 타입이 변경되지 않는다. 정적 타입 언어의 간단한 예제를 살펴보자. 다음은 Java 코드의 한 부분이다. String thing; thing = &quot;Hello&quot;; 첫 번째 줄은 컴파일 시 thing이라는 이름의 변수가 String 타입으로 바인딩 되었음을 선언하였다. 해당 변수는 다른 타입으로 결코 재 바인딩 될 수 없다. 두 번째 줄에서 thing은 값을 할당 받았다. 이것은 String 객체 외의 값들이 절대 선언될 수 없다. 예를 들어서 만약 당신이 thing = 28.1f으로 선언하면 컴파일러는 양립될 수 없는 타입 때문에 에러를 발생시킬 것이다. Python은 항상 동적으로 타이핑 된 언어로 남을 것이다. 하지만, PEP 484는 Python 코드에서도 정적 타입 체킹을 가능하도록 하는 Type hint를 소개한다. 대부분의 정적 타입 언어들에서 타입이 작동하는 방식과 달리, Type hint는 스스로 Python이 타입을 강제하도록 하는 것은 아니다. 이름에서 알 수 있듯이 Type hint는 단지 타입을 제안한다. Type hint를 활용한 정적 유형 검사를 수행하는 다른 도구들을 나중에 소개하도록 하겠다. 1-3. Duck Typping(다른 설명으로 대체함) Python에 대해 이야기 할 때 자주 쓰이는 또 다른 용어는 Duck Typing이다. 이 용어는 “오리처럼 걷고 오리처럼 꽥꽥거리면 오리임에 틀림없다”는 말에서 유래되었다. 객체가 실행이 된 시점에서 해당 method와 attribute를 확인하여 객체의 타입을 확인한다. 덕 타이핑(Duck Typing)이란? class Duck: def quack(self): print('꽥꽥') def feathuers(self): print('오리에게 흰색, 회색 깃털이 있습니다.') def fly(self): print('오리가 날았지만 곧 떨어집니다.') class Person: def quack(self): print('이 사람이 오리를 흉내냅니다.') def feathuers(self): print('사람은 바닥에서 깃털을 주어서 보여줍니다.') def in_the_forest(duck): duck.quack() duck.feathuers() duck.fly() def game(): donald = Duck() john = Person() in_the_forest(donald) in_the_forest(john) if __name__ == &quot;__main__&quot;: game() # result: # 꽥꽥 # 오리에게 흰색, 회색 깃털이 있습니다. # 오리가 날았지만 곧 떨어집니다. # 이 사람이 오리를 흉내냅니다. # 사람은 바닥에서 깃털을 주어서 보여줍니다. # AttributeError: 'Person' object has no attribute 'fly' class Duck과 Person은 quack()와 feathuers()의 동일 method를 가지고 있지만. Person class의 경우 fly() method를 가지고 있지 않기 때문에 AttributeError가 발생한다. 이러한 duck typing의 경우 타입에 대해 매우 자유롭게 작성 할 수 있다. 하지만 코드 실행 시 자료형 오류나 선언되지 않은 method나 attribute를 찾지 못해 오류가 발생할 수 있다. 이러한 문제들은 개발이 어느 정도 진행 된 뒤 발생 될 가능성이 크며, 해당 오류를 찾는 것이 쉽지 않다. «««&amp;lt; HEAD 2. Hello Types 이번 장에서는 Type hint를 function에 어떻게 추가 하는지 알아 볼 것이다. 다음의 function은 첫 글자를 대문자화 해주고 장식 라인을 추가하여 텍스트 문자열을 헤드라인 형태로 바꾼다. def headline(text, align=True): if align: return f&quot;{text.title()}\n{'-' * len(text)}&quot; else: return f&quot; {text.title()} &quot;.center(50, &quot;o&quot;) print(headline(&quot;python type checking&quot;)) # result: # Python Type Checking # -------------------- print(headline(&quot;python type checking&quot;, align=False)) # oooooooooooooo Python Type Checking oooooooooooooo 해당 function은 기본적으로 밑줄과 왼쪽 정렬된 헤드라인을 반환한다. 정렬 플래그를 False로 설정하면 o에 감싸져서 중앙에 위치된 헤드라인을 반환하도록 할 수 있다. function에 대한 타입을 추가하려면 다음과 같이 인수 및 변환 값에 annotation을 달기만 하면 된다. def headline2(text: str, align: bool = True) -&amp;gt; str: if align: return f&quot;{text.title()}\n{'-' * len(text)}&quot; else: return f&quot; {text.title()} &quot;.center(50, &quot;o&quot;) text: str 구문은 text 인수는 str 타입이어야 한다고 말한다. 마찬가지로, 선택적 align 인수는 default를 True의 bool 타입을 가져야 한다. 마지막으로, -&amp;gt; str 구문은 headline2()가 문자열을 반환함을 명시하고 있다. PEP 8은 다음과 같은 구문을 추천한다 콜론에 대한 기본 규칙은 콜론 앞에는 빈공간을 두지 않고 뒤에는 한 공간을 둔다: text: str = 기호 양 옆에는 공백을 사용하도록 한다: align: bool = True -&amp;gt; 화살표 양 옆에는 공백을 사용하도록 한다: def headline2(…) -&amp;gt; str 이와 같은 Type hint를 추가하는 것은 런타임 효과가 없다. 즉, 그것들은 힌트일 뿐 스스로 시행되지 않는다. 예를 들어, align 인수에 잘못된 유형을 사용하더라도 코드는 문제나 경고 없이 계속 실행된다. print(headline2(&quot;python type checking&quot;, align=&quot;left&quot;)) # reulst: # Python Type Checking # -------------------- 위와 같은 종류의 오류를 잡기 위해서 static type checker를 사용할 수 있다. static type checker는 코드가 직접적으로 실행 되지 않아도 타입을 체크 해주는 도구이다. pycharm과 같은 IDE에서는 이미 type checker가 내장되어 있을 수 있다. 타입 체킹을 위한 가장 일반적인 도구는 Mypy이다. 이 챕터에서는 Mypy에 대한 간단한 설명만을 진행하며, 차 후에 Mypy에 대한 자세한 설명을 할 것이다. 만약 당신의 시스템에 Mypy가 설치되어 있지 않다면 pip를 활용하여 설치 할 수 있다. pip install mypy 2-2. mypy_test.py 파일에 다음의 코드를 입력하라. # 2-2. mypy_test.py def headline(text: str, align: bool = True) -&amp;gt; str: if align: return f&quot;{text.title()}\n{'-' * len(text)}&quot; else: return f&quot; {text.title()} &quot;.center(50, &quot;o&quot;) print(headline(&quot;python type checking&quot;)) print(headline(&quot;use mypy&quot;, align=&quot;center&quot;)) 이것은 앞에서 본 코드들과 본질적으로 같은 코드이다. 이제 다음의 코드로 mypy를 실행해보자. mypy '.\2-2. mypy_test.py' # result: 2-2. mypy_test.py:10: error: Argument &quot;align&quot; to &quot;headline&quot; has incompatible type &quot;str&quot;; expected &quot;bool&quot; Found 1 error in 1 file (checked 1 source file) Type hint를 바탕으로 Mypy는 위 코드에서 10번 라인에서 잘못된 타입을 사용하고 있음을 알려준다. 3. Pros and Cons(장·단점) 앞 섹션에서 파이썬에서 type checking이 어떻게 이루어지는지 맛을 보았다. 또한 코드에 type을 추가하는 장정 중 하나인 Type hint가 특정 오류를 파악하는데 도움이 된다는 예제를 살펴보았다. 그 밖의 장점으로는 다음과 같다. Type hint는 당신의 코드를 문서화하는데 도움이 된다. 전통적으로 함수의 인수에 대해 예상되는 유형을 문서화하려면 docstring을 사용했을 것이다. 이것은 효과가 있지만 docstring에 대한 기준이 없기 때문에(PEP 257에도 불구하고) 그것들은 자동 점검에 쉽게 사용될 수 없다. Type hint는 IDE들과 linter들의 성능을 향상시킨다. 이것들은 당신의 코드에 대한 정적 분석을 훨씬 쉽게 만들어준다. 이는 IDE가 더 나은 코드 완성 및 유사한 기능을 제공 할 수 있게 한다. Type annotation을 통해 PyCharm은 텍스트가 문자임을 알고 이를 바탕으로 구체적인 제안을 할 수 있다. Type hint는 보다 명확한 아키텍처를 구축하고 유지 관리하는데 도움이 된다. Type hint를 사용하는 행위는 당신의 프로그램의 Type에 대해 생각하도록 강요한다. Python의 역동적인 특성이 큰 자산 중 하나이지만, Duck Typing이나 Overload method들, 또는 복수 Return type에 대해 의식하는 것은 좋은 일이다. 물론 정적 Type checking이 다 좋은 것은 아니다. 개발자가 고려해야 할 단점 또한 있다. Type hint는 개발자의 시간과 노력이 더해져야 한다. 비록 그것이 디버깅하는데 더 적은 시간을 소비할 수 있게 하더라도, 그것은 좀 더 많은 코드를 입력하기 위해 더 많은 시간을 할애 할 것이다. Type hint는 Modern Python에 적합하다. Annotation은 Python 3.0에서 소개 되었으며, Python 2.7에서는 Type comment를 사용할 수 없다. 그러나 ‘Variable annotation’과 ‘Postponed evaluation of type hint’와 같은 개선은 당신이 Python 3.6 또는 3.7을 사용하여 Type cheking을 좀 더 잘 할 수 있다는 것을 의미한다. Type hint는 시동 시 약간의 패널티가 있다. Typing Module을 사용해야 하는 경우 특히 짧은 스크립트에서 import 시간이 상당히 걸릴 수 있다. // TODO - Measureing Import Time 그래서 당신은 당신의 코드에 있는 정적 타입 체크를 사용해야 하는가? 다행히도 Python은 gradual typing의 개념을 제공한다. 이것은 당신이 점진적으로 당신의 코드에 Type을 도입할 수 있다는 것을 의미한다. Type hint가 없는 코드는 static type checker에 의해 무시된다. 따라서, 중요한 구성 요소에 Type을 추가하기 시작하고 해당 구성 요소가 가치가 있다면 Type 추가를 계속 진행 할 수 있다. 위의 장·단점을 살펴보면 Type을 추가하는 것은 실행 중인 프로그램이나 프로그램 사용자에게 아무런 영향을 미치지 않는다는 것을 알 수 있다. Type checking은 개발자로서의 삶을 더 낫고 편리하게 만들기 위한 것이다. 프로젝트에 Type을 추가할 지 여부에 대한 몇 가지 규칙은 다음과 같다. Python을 배우기 시작한 지 얼마 안 된 사람이라면 더 많은 경험이 있을 때까지 Type hint의 사용을 자제하라. Type hint는 짤은 일회용 스크립트에서는 거의 사용되지 않는다. 다른 사람이 사용할 라이브러리, 특히 PyPy에 게시된 라이브러리에서 Type hint는 많은 가치를 추가한다. 당신의 라이브러리들을 사용하는 다른 코드들은 적절하게 Type을 체크하기 위해서 이러한 Type hint들을 필요로 한다. Type hint를 사용하는 프로젝트로 cursive_re, black, Real Python Reader, Mypy 가 있다 더 큰 프로젝트에서 Type hint를 입력하면 코드가 어떻게 흐르는지 이해하는 데 도움이 되며 매우 권장된다. 당신이 다른 사람들과 협력하는 프로젝트에서는 더욱 사용이 권장된다. Bernát Gábor의 “The State of Type Hints in Python” 글에서 “Type hint는 unit test에서 작성될 만한 가치가 있을 때마다 사용해야한다.“고 권고하였다. 실제로 Type hint는 코드에서 테스트와 유사한 역할을 한고, 테스트는 개발자가 더 나은 코드를 작성하는데 도움을 준다. 이제 Python에서 Type checking이 어떻게 작동하는지, 그리고 자신의 프로젝트에서 채택하고 싶은 것인지에 대해 생각해보자. 이 가이드의 나머지 부분에서는 정적 타입 체커를 실행하는 방법(특히 MyPy에 관하여), Type hint 없는 라이브러리를 사용한 코드에서 Type을 체크하는 방법, 그리고 runtime 시 annotation 사용 방법 에 대해 자세히 다룰 것이다. Annotations</summary></entry><entry><title type="html">VirtualBox 새 머신 만들기</title><link href="http://localhost:4000/2020/07/01/virtualbox-make-imgae.html" rel="alternate" type="text/html" title="VirtualBox 새 머신 만들기" /><published>2020-07-01T00:00:00+09:00</published><updated>2020-07-01T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/01/virtualbox%20make%20imgae</id><content type="html" xml:base="http://localhost:4000/2020/07/01/virtualbox-make-imgae.html">&lt;h1 id=&quot;virtualbox-새-머신-만들기&quot;&gt;VirtualBox 새 머신 만들기&lt;/h1&gt;
+
+&lt;h2 id=&quot;새-머신-생성하기&quot;&gt;새 머신 생성하기&lt;/h2&gt;
+&lt;h3 id=&quot;1-머신-생성-마법사-실행&quot;&gt;1. 머신 생성 마법사 실행&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/01_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 01&quot; alt=&quot;make vimg 01&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 처음 나오는 화면에서 새로 만들기(N) 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;! 첫 화면과 다른 화면이 보인다면 다음과 같이 첫 화면으로 이동 할 수 있음
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/01_01_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 01_01&quot; alt=&quot;make vimg 01_01&quot; /&gt;
+&lt;strong&gt;**&lt;/strong&gt;&lt;strong&gt;**&lt;/strong&gt;&lt;strong&gt;**&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-이름-및-운영-체제-정의&quot;&gt;2. 이름 및 운영 체제 정의&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/02_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 02&quot; alt=&quot;make vimg 02&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 각 내용에 지정하고자 하는 내용을 입력함
+  - 이름: 가상 머신의 식별을 위한 이름
+  - 머신 폴더: 가상 머신에 관련된 정보들이 저장될 경로(해당 폴더안에 이름 별로 폴더가 생성됨)
+  - 종류: 설치할 OS 계열
+  - 버전: 설치할 OS의 상세 종류 (버전, OS 상세 계열, bit 수)
+
+2. 다음(N) 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;3-메모리-크기-정의&quot;&gt;3. 메모리 크기 정의&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/03_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 03&quot; alt=&quot;make vimg 03&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 생성 하고자 하는 메모리 크기를 정의
+  - 슬라이더 또는 박스에 숫자로 기입 할 수 있음
+
+2. 다음(N) 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;4-하드-디스크-정의&quot;&gt;4. 하드 디스크 정의&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/04_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 04&quot; alt=&quot;make vimg 04&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 지금 새 가상 하드 디스크 만들기(C) 라디오버튼 선택
+  - 가상 하드디스크를 추가하지 않음: 가상 머신 생성 시 디스크를 만들지 않음
+  - 지금 새 가상 하드 디스크 만들기: 가상 머신 생성 시 새로운 가상 디스크를 만듦
+  - 기존 가상 하드 디스크 파일 사용: 기존에 생성된 가상 디스크를 해당 가상 머신에서 사용
+
+2. 만들기(N) 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;5-하드-디스크-파일-종류-정의&quot;&gt;5. 하드 디스크 파일 종류 정의&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/05_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 05&quot; alt=&quot;make vimg 05&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. VDI(VirtualBox Disk Image) 라디오버튼 선택
+  - VDI(VirtualBox Disk Image): VirtualBox에서만 사용이 가능한 형태
+  - VHD(Virtual Hard Disk): VirtualBox(Oracle), Hyper-V(MS), Xen(Citrix)에서 사용이 가능한 형태
+  - VMDK(Virtual Machine Disk): VirtualBox(Oracle), VMWare(MS)에서 사용이 가능한 형태
+
+2. 다음(N) 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;6-파일-위치-및-크기-종류-정의&quot;&gt;6. 파일 위치 및 크기 종류 정의&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/06_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 06&quot; alt=&quot;make vimg 06&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 파일 위치는 default로 정의하는 것이 좋음
+2. 새 가상 하드 디스크 크기 정의
+  - 슬라이더 또는 박스에 숫자로 기입 할 수 있음
+2. 만들기 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;7-가상-하드-디스크-만들기-process-창&quot;&gt;7. 가상 하드 디스크 만들기 Process 창&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/07.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 07&quot; alt=&quot;make vimg 07&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 가상 하드 디스크 구성 중인 화면으로 가상 하드 디스크의 크기에 따라 생성 시간에 차이가 있음
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;8-새-가상-머신-만들기-완료&quot;&gt;8. 새 가상 머신 만들기 완료&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/huvso/study/blob/master/VirtualBox/01%20make%20virtual%20image/img/08_marked.png?raw=true&quot; align=&quot;center&quot; title=&quot;make vimg 08&quot; alt=&quot;make vimg 08&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;좌측 신규 가상 머신이 제대로 생성 되었는지 확인
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>huvso</name><email>huvso100@gmail.com</email></author><category term="VirtualBox" /><summary type="html">VirtualBox 새 머신 만들기 새 머신 생성하기 1. 머신 생성 마법사 실행 1. 처음 나오는 화면에서 새로 만들기(N) 클릭 ! 첫 화면과 다른 화면이 보인다면 다음과 같이 첫 화면으로 이동 할 수 있음 ****** 2. 이름 및 운영 체제 정의 1. 각 내용에 지정하고자 하는 내용을 입력함 - 이름: 가상 머신의 식별을 위한 이름 - 머신 폴더: 가상 머신에 관련된 정보들이 저장될 경로(해당 폴더안에 이름 별로 폴더가 생성됨) - 종류: 설치할 OS 계열 - 버전: 설치할 OS의 상세 종류 (버전, OS 상세 계열, bit 수) 2. 다음(N) 클릭 3. 메모리 크기 정의 1. 생성 하고자 하는 메모리 크기를 정의 - 슬라이더 또는 박스에 숫자로 기입 할 수 있음 2. 다음(N) 클릭 4. 하드 디스크 정의 1. 지금 새 가상 하드 디스크 만들기(C) 라디오버튼 선택 - 가상 하드디스크를 추가하지 않음: 가상 머신 생성 시 디스크를 만들지 않음 - 지금 새 가상 하드 디스크 만들기: 가상 머신 생성 시 새로운 가상 디스크를 만듦 - 기존 가상 하드 디스크 파일 사용: 기존에 생성된 가상 디스크를 해당 가상 머신에서 사용 2. 만들기(N) 클릭 5. 하드 디스크 파일 종류 정의 1. VDI(VirtualBox Disk Image) 라디오버튼 선택 - VDI(VirtualBox Disk Image): VirtualBox에서만 사용이 가능한 형태 - VHD(Virtual Hard Disk): VirtualBox(Oracle), Hyper-V(MS), Xen(Citrix)에서 사용이 가능한 형태 - VMDK(Virtual Machine Disk): VirtualBox(Oracle), VMWare(MS)에서 사용이 가능한 형태 2. 다음(N) 클릭 6. 파일 위치 및 크기 종류 정의 1. 파일 위치는 default로 정의하는 것이 좋음 2. 새 가상 하드 디스크 크기 정의 - 슬라이더 또는 박스에 숫자로 기입 할 수 있음 2. 만들기 클릭 7. 가상 하드 디스크 만들기 Process 창 1. 가상 하드 디스크 구성 중인 화면으로 가상 하드 디스크의 크기에 따라 생성 시간에 차이가 있음 8. 새 가상 머신 만들기 완료 좌측 신규 가상 머신이 제대로 생성 되었는지 확인</summary></entry></feed>

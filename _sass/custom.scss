@@ -1,4 +1,13 @@
 /* start custom scss snippet */
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-subset.css");
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-full.css");
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
+
+body {
+  font-family: 'D2Coding', monospace;
+}
+
 code {
   font-size: map-get($base, font-size-sm);
   line-height: 1.4;
