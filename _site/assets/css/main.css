@@ -2633,56 +2633,56 @@ code { font-size: 0.85rem; line-height: 1.4; }
 
 .page__aside .toc-aside { padding: 3rem 0 1rem 1rem; }
 
-.ic-java { width: 364px; height: 400px; background: url("css_sprites.png") -1165px -430px; }
+.ic-java { width: 114px; height: 125px; background: url("css_sprites.png") -10px -10px; }
 
-.ic-python { width: 364px; height: 400px; background: url("css_sprites.png") -10px -850px; }
+.ic-python { width: 114px; height: 125px; background: url("css_sprites.png") -144px -10px; }
 
-.ic-js { width: 364px; height: 400px; background: url("css_sprites.png") -394px -850px; }
+.ic-js { width: 114px; height: 125px; background: url("css_sprites.png") -278px -10px; }
 
-.ic-php { width: 364px; height: 400px; background: url("css_sprites.png") -778px -850px; }
+.ic-php { width: 114px; height: 125px; background: url("css_sprites.png") -10px -155px; }
 
-.ic-html { width: 364px; height: 400px; background: url("css_sprites.png") -1162px -850px; }
+.ic-html { width: 114px; height: 125px; background: url("css_sprites.png") -144px -155px; }
 
-.ic-css { width: 364px; height: 400px; background: url("css_sprites.png") -1550px -10px; }
+.ic-css { width: 114px; height: 125px; background: url("css_sprites.png") -278px -155px; }
 
-.ic-node { width: 364px; height: 400px; background: url("css_sprites.png") -1550px -430px; }
+.ic-node { width: 114px; height: 125px; background: url("css_sprites.png") -412px -10px; }
 
-.ic-oracle { width: 364px; height: 400px; background: url("css_sprites.png") -1550px -850px; }
+.ic-oracle { width: 114px; height: 125px; background: url("css_sprites.png") -412px -155px; }
 
-.ic-mysql { width: 364px; height: 400px; background: url("css_sprites.png") -10px -1270px; }
+.ic-mysql { width: 114px; height: 125px; background: url("css_sprites.png") -10px -300px; }
 
-.ic-mongodb { width: 364px; height: 400px; background: url("css_sprites.png") -394px -1270px; }
+.ic-mongodb { width: 114px; height: 125px; background: url("css_sprites.png") -144px -300px; }
 
-.ic-elasticsearch { width: 364px; height: 400px; background: url("css_sprites.png") -778px -1270px; }
+.ic-elasticsearch { width: 114px; height: 125px; background: url("css_sprites.png") -278px -300px; }
 
-.ic-redis { width: 364px; height: 400px; background: url("css_sprites.png") -1162px -1270px; }
+.ic-redis { width: 114px; height: 125px; background: url("css_sprites.png") -412px -300px; }
 
-.ic-flask { width: 364px; height: 400px; background: url("css_sprites.png") -1546px -1270px; }
+.ic-flask { width: 114px; height: 125px; background: url("css_sprites.png") -546px -10px; }
 
-.ic-docker { width: 364px; height: 400px; background: url("css_sprites.png") -1934px -10px; }
+.ic-docker { width: 114px; height: 125px; background: url("css_sprites.png") -546px -155px; }
 
-.ic-k8s { width: 364px; height: 400px; background: url("css_sprites.png") -1934px -430px; }
+.ic-k8s { width: 114px; height: 125px; background: url("css_sprites.png") -546px -300px; }
 
-.ic-linux { width: 364px; height: 400px; background: url("css_sprites.png") -1934px -850px; }
+.ic-linux { width: 114px; height: 125px; background: url("css_sprites.png") -10px -445px; }
 
-.ic-windows { width: 364px; height: 400px; background: url("css_sprites.png") -1934px -1270px; }
+.ic-windows { width: 114px; height: 125px; background: url("css_sprites.png") -144px -445px; }
 
-.ic-postgresql { width: 364px; height: 400px; background: url("css_sprites.png") -10px -1690px; }
+.ic-postgresql { width: 114px; height: 125px; background: url("css_sprites.png") -278px -445px; }
 
-.ic-vuejs { width: 364px; height: 400px; background: url("css_sprites.png") -394px -1690px; }
+.ic-vuejs { width: 114px; height: 125px; background: url("css_sprites.png") -412px -445px; }
 
-.ic-ps { width: 365px; height: 400px; background: url("css_sprites.png") -10px -10px; }
+.ic-ps { width: 114px; height: 125px; background: url("css_sprites.png") -546px -445px; }
 
-.ic-xd { width: 365px; height: 400px; background: url("css_sprites.png") -395px -10px; }
+.ic-xd { width: 114px; height: 125px; background: url("css_sprites.png") -680px -10px; }
 
-.ic-ai { width: 365px; height: 400px; background: url("css_sprites.png") -780px -10px; }
+.ic-ai { width: 114px; height: 125px; background: url("css_sprites.png") -680px -155px; }
 
-.ic-spring { width: 365px; height: 400px; background: url("css_sprites.png") -10px -430px; }
+.ic-spring { width: 114px; height: 125px; background: url("css_sprites.png") -680px -300px; }
 
-.ic-gis { width: 365px; height: 400px; background: url("css_sprites.png") -395px -430px; }
+.ic-gis { width: 114px; height: 125px; background: url("css_sprites.png") -680px -445px; }
 
-.ic-game { width: 365px; height: 400px; background: url("css_sprites.png") -780px -430px; }
+.ic-game { width: 114px; height: 125px; background: url("css_sprites.png") -10px -590px; }
 
-.ic-ws { width: 365px; height: 400px; background: url("css_sprites.png") -1165px -10px; }
+.ic-ws { width: 114px; height: 125px; background: url("css_sprites.png") -144px -590px; }
 
 /*# sourceMappingURL=main.css.map */
