@@ -1,7 +1,7 @@
 ---
 comments: true
 title: Proxy란?
-key: 2020-07-02
+key: 202007024
 picture_frame: shadow
 tags:
   - [Infrastructure, Proxy]

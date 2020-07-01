@@ -1,7 +1,7 @@
 ---
 comments: true
 title: Python Type Checking
-key: 202004140
+key: 202007011
 picture_frame: shadow
 tags:
   - Python

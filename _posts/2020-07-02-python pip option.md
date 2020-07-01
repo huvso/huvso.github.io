@@ -1,7 +1,7 @@
 ---
 comments: true
 title: PIP Install Option
-key: 2020-07-02
+key: 202007025
 picture_frame: shadow
 tags:
   - Python

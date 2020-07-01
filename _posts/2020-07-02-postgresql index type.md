@@ -1,7 +1,7 @@
 ---
 comments: true
 title: PostgreSQL Index Type
-key: 2020-07-02
+key: 202007022
 picture_frame: shadow
 tags:
   - PostgreSQL

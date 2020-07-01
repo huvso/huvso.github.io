@@ -1,7 +1,7 @@
 ---
 comments: true
 title: 데이터베이스 Transaction ACID
-key: 2020-07-02
+key: 202007021
 picture_frame: shadow
 tags:
   - Database

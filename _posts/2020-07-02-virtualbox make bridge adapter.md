@@ -1,7 +1,7 @@
 ---
 comments: true
 title: VirtualBox 브릿지 어댑터 등록
-key: 2020-07-02
+key: 202007026
 picture_frame: shadow
 tags:
   - VirtualBox

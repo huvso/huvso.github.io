@@ -1,7 +1,7 @@
 ---
 comments: true
 title: VirtualBox 새 머신 만들기
-key: 2020-07-01
+key: 202007012
 picture_frame: shadow
 tags:
   - VirtualBox
