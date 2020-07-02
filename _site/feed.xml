@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2020-07-02T08:14:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Huvso 시스템 개발 일지</title><subtitle>Your Site Description
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2020-07-02T10:52:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Huvso 시스템 개발 일지</title><subtitle>Huvso 시스템 개발 일지
 </subtitle><author><name>huvso</name><email>huvso100@gmail.com</email></author><entry><title type="html">VirtualBox 브릿지 어댑터 등록</title><link href="http://localhost:4000/2020/07/02/virtualbox-make-bridge-adapter.html" rel="alternate" type="text/html" title="VirtualBox 브릿지 어댑터 등록" /><published>2020-07-02T00:00:00+09:00</published><updated>2020-07-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/07/02/virtualbox%20make%20bridge%20adapter</id><content type="html" xml:base="http://localhost:4000/2020/07/02/virtualbox-make-bridge-adapter.html">&lt;h1 id=&quot;virtualbox-브릿지-어댑터-등록&quot;&gt;VirtualBox 브릿지 어댑터 등록&lt;/h1&gt;
 
 &lt;h2 id=&quot;시작&quot;&gt;시작&lt;/h2&gt;
@@ -87,7 +87,7 @@
 
 &lt;h2 id=&quot;설치-옵션&quot;&gt;설치 옵션&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;-r, –requirement&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-r-requirement&quot;&gt;&lt;strong&gt;-r, –requirement&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -107,7 +107,7 @@ pyhive==0.6.0
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-c –constraint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-c-constraint&quot;&gt;&lt;strong&gt;-c –constraint&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;설치 package의 version에 대한 제약 조건 파일을 명시&lt;/li&gt;
@@ -117,13 +117,13 @@ pyhive==0.6.0
   &lt;li&gt;참조: &lt;a href=&quot;https://stackoverflow.com/questions/34645821/pip-constraints-files/34653182&quot;&gt;https://stackoverflow.com/questions/34645821/pip-constraints-files/34653182&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-no-deps&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-no-deps&quot;&gt;&lt;strong&gt;-no-deps&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;의존성 package들을 설치 하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--pre&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--pre&quot;&gt;&lt;strong&gt;--pre&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;시험판이나 개발 버전을 설치 할 수 있도록 함&lt;/li&gt;
@@ -131,14 +131,14 @@ pyhive==0.6.0
   &lt;li&gt;module 개발을 한다거나 필요한 기능의 module을 테스트 할 때 활용 할 수 있음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--e, –editable &amp;lt;path/url&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--e-editable-pathurl&quot;&gt;&lt;strong&gt;--e, –editable &amp;lt;path/url&amp;gt;&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;setuptools의 develop mode 처럼 패키지를 수정 가능한 모드로 설치 할 수 있음&lt;/li&gt;
   &lt;li&gt;project path를 명시하거나 형상관리(Git, SVN 등)툴의 url을 명시 할 수 있음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-t, –target&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-t-target&quot;&gt;&lt;strong&gt;-t, –target&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;패키지를 설치하고자 하는 경로를 명시하여 설치 할 때 사용&lt;/li&gt;
@@ -146,19 +146,19 @@ pyhive==0.6.0
   &lt;li&gt;의 기존 패키지를 새 버전으로 바꾸려면 –upgrade 옵션을 사용할 것&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--user&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--user&quot;&gt;&lt;strong&gt;--user&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;사용자 경로에 설치함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;–root&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;root&quot;&gt;&lt;strong&gt;–root&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;root directory에 설치를 한다고 하는데 잘 모르겠음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;–prefix&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;prefix&quot;&gt;&lt;strong&gt;–prefix&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;lib,bin 및 기타 최상위 폴가 있는 설치 접두사&lt;/li&gt;
@@ -169,7 +169,7 @@ pyhive==0.6.0
   &lt;li&gt;참조: &lt;a href=&quot;https://stackoverflow.com/questions/25333640/pip-python-differences-between-install-option-prefix-and-root-and&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-b, –build&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-b-build&quot;&gt;&lt;strong&gt;-b, –build&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;패키지 압축해제 및 빌드할 디렉토리 명시&lt;/li&gt;
@@ -178,7 +178,7 @@ pyhive==0.6.0
   &lt;li&gt;빌드가 될 때 실패되면 빌드 디렉토리는 clean 되지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-src&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-src&quot;&gt;&lt;strong&gt;-src&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;편집 가능한 프로젝트를 check out할 디렉토리&lt;/li&gt;
@@ -186,14 +186,14 @@ pyhive==0.6.0
   &lt;li&gt;전역 설치의 기본값은 “ / src”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-U, –upgrade&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-u-upgrade&quot;&gt;&lt;strong&gt;-U, –upgrade&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;패키지를 최신 버전으로 업그레이드&lt;/li&gt;
   &lt;li&gt;종속성 처리는 upgrade-strategy에 따름&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--upgrade-strategy &amp;lt;upgrade_strategy&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--upgrade-strategy-upgrade_strategy&quot;&gt;&lt;strong&gt;--upgrade-strategy &amp;lt;upgrade_strategy&amp;gt;&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;종속성 업그레이드를 처리하는 방법 결정[default: only-if-needed]&lt;/li&gt;
@@ -202,33 +202,33 @@ pyhive==0.6.0
 · “only-if-needed”: 업그레이드 된 패키지의 요구 사항을 충족하지 않는 경우에만 업그레이드 됨&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--force-reinstall&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--force-reinstall&quot;&gt;&lt;strong&gt;--force-reinstall&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;무조건 모든 패키지를 재설치함&lt;/li&gt;
   &lt;li&gt;최신 버전의 패키지라도 무조건 재설치함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--l, –ignore-installed&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--l-ignore-installed&quot;&gt;&lt;strong&gt;--l, –ignore-installed&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;설치가 되어있는 패키지들은 무시함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--ignore-requires-python&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--ignore-requires-python&quot;&gt;&lt;strong&gt;--ignore-requires-python&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Requires-Python 정보를 무시함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--no-build-isolation&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--no-build-isolation&quot;&gt;&lt;strong&gt;--no-build-isolation&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;최신 소스 배포를 빌드 할 때 isolation을 비활성화함&lt;/li&gt;
   &lt;li&gt;이 옵션을 사용하는 경우 PEP 518에서 지정한 빌드 종속성이 이미 설치되어 있어야함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--install-option&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--install-option&quot;&gt;&lt;strong&gt;--install-option&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;setup.py install 명령에 arguments들을 명시&lt;/li&gt;
@@ -237,37 +237,37 @@ pyhive==0.6.0
   &lt;li&gt;디렉토리 경로 옵션을 추가하는 경우에는 절대 경로를 사용해야함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--global-option&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--global-option&quot;&gt;&lt;strong&gt;--global-option&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;setup.py global options을 명시&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--compile&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--compile&quot;&gt;&lt;strong&gt;--compile&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Python 소스 파일을 바이트 코드로 컴파일&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--no-compile&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--no-compile&quot;&gt;&lt;strong&gt;--no-compile&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Python 소스 파일을 바이트 코드로 컴파일 하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--no-warn-script-location&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--no-warn-script-location&quot;&gt;&lt;strong&gt;--no-warn-script-location&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;PATH 외부에서 설치 할 때 warn 표시하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--no-warn-conflicts&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--no-warn-conflicts&quot;&gt;&lt;strong&gt;--no-warn-conflicts&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;깨진 의존성에 대해 warn 표시하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--only-binary&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--only-binary&quot;&gt;&lt;strong&gt;--only-binary&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;소스 패키지를 사용하지 않음&lt;/li&gt;
@@ -278,19 +278,19 @@ pyhive==0.6.0
   &lt;li&gt;바이너리 배포판이 없는 패키지의 경우 이 옵션을 사용하면 설치 되지 않음\&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--prefer-binary&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--prefer-binary&quot;&gt;&lt;strong&gt;--prefer-binary&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;최신 소스 패키지보다 오래된 바이너리 패키지 우선 설치&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--no-clean&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--no-clean&quot;&gt;&lt;strong&gt;--no-clean&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;build directory들을 clean up 하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--progress-bar &amp;lt;progress_bar&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--progress-bar-progress_bar&quot;&gt;&lt;strong&gt;--progress-bar &amp;lt;progress_bar&amp;gt;&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -308,34 +308,34 @@ pyhive==0.6.0
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-i, –index-url&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-i-index-url&quot;&gt;&lt;strong&gt;-i, –index-url&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Python Package Index의 기본 url 명시(default: &lt;a href=&quot;http://pypi.org/simple&quot;&gt;http://pypi.org/simple&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;PEP 503 (단순 저장소 API)를 준수하거나 또는 동일한 형식으로 배치된 로컬 디렉토리 url을 사용해야함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--extra-index-url&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--extra-index-url&quot;&gt;&lt;strong&gt;--extra-index-url&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;python package index를 추가 url들을 명시&lt;/li&gt;
   &lt;li&gt;--index-url과 동일한 정책을 따름&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--no-index&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--no-index&quot;&gt;&lt;strong&gt;--no-index&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;package index 무시&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;-f, –find-links&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;-f-find-links&quot;&gt;&lt;strong&gt;-f, –find-links&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;html 파일의 URL 또는 경로인 경우 아카이브에 대한 링크를 구문 분석함&lt;/li&gt;
   &lt;li&gt;로컬 경로 또는 file:// url이 디렉토리인 경우 디렉토리 목록에서 아카이브를 찾음.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;--process-dependency-links&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;--process-dependency-links&quot;&gt;&lt;strong&gt;--process-dependency-links&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;의존성 링크의 프로세싱을 가능하게 함&lt;/li&gt;
