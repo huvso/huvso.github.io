@@ -2641,56 +2641,58 @@ code { font-size: 0.85rem; line-height: 1.4; }
 
 .ic { display: inline-block; overflow: hidden; font-size: 0; line-height: 0; }
 
-.ic-java { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -10px; }
+.ic-ai { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -10px; }
 
-.ic-python { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -144px -10px; }
+.ic-css { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -373px -141px; }
 
-.ic-js { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -278px -10px; }
+.ic-docker { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -272px; }
 
-.ic-php { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -155px; }
+.ic-es { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -131px -272px; }
 
-.ic-html { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -144px -155px; }
+.ic-flask { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -252px -272px; }
 
-.ic-css { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -278px -155px; }
+.ic-game { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -373px -272px; }
 
-.ic-node { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -412px -10px; }
+.ic-gis { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -494px -10px; }
 
-.ic-oracle { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -412px -155px; }
+.ic-html { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -494px -140px; }
 
-.ic-mysql { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -300px; }
+.ic-java { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -131px -10px; }
 
-.ic-mongodb { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -144px -300px; }
+.ic-js { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -494px -270px; }
 
-.ic-elasticsearch { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -278px -300px; }
+.ic-k8s { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -402px; }
 
-.ic-redis { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -412px -300px; }
+.ic-linux { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -131px -402px; }
 
-.ic-flask { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -546px -10px; }
+.ic-mdb { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -252px -402px; }
 
-.ic-docker { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -546px -155px; }
+.ic-msql { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -373px -402px; }
 
-.ic-k8s { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -546px -300px; }
+.ic-node { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -494px -402px; }
 
-.ic-linux { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -445px; }
+.ic-odb { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -615px -10px; }
 
-.ic-windows { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -144px -445px; }
+.ic-php { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -615px -140px; }
 
-.ic-postgresql { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -278px -445px; }
+.ic-ps { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -252px -10px; }
 
-.ic-vuejs { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -412px -445px; }
+.ic-psql { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -141px; }
 
-.ic-ps { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -546px -445px; }
+.ic-python { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -615px -270px; }
 
-.ic-xd { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -680px -10px; }
+.ic-react { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -131px -141px; }
 
-.ic-ai { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -680px -155px; }
+.ic-redis { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -615px -400px; }
 
-.ic-spring { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -680px -300px; }
+.ic-spring { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -532px; }
 
-.ic-gis { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -680px -445px; }
+.ic-vue { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -252px -141px; }
 
-.ic-game { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -10px -590px; }
+.ic-windows { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -131px -532px; }
 
-.ic-ws { width: 114px; height: 125px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -144px -590px; }
+.ic-ws { width: 101px; height: 110px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -252px -532px; }
+
+.ic-xd { width: 101px; height: 111px; background: url("https://github.com/huvso/huvso.github.io/blob/master/assets/images/ic_sprites.png?raw=true") -373px -10px; }
 
 /*# sourceMappingURL=main.css.map */

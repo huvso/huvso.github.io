@@ -25,6 +25,7 @@ permalink: /aboutme.html
   <p>· IoT 비상벨 모니터링 시스템 개발</p>
   <p>· 소켓 통신 기반 경진대회 스코어 보드 웹사이트 개발</p>
   <p>· 빅데이터 연구자를 위한 클라우드컴퓨팅 기반 커뮤니티 사이트 개발</p>
+  <p>· 장애/요양 보호자를 위한 통합 플랫폼 개발</p>
   <br>
 
   <h3><span class="highlight">S</span>oft skill <span class="highlight">E</span>xperience</h3>
@@ -58,18 +59,45 @@ permalink: /aboutme.html
     
       <div class="slides">
         <div id="lg-slide-1">
-          <span class="ic ic-python"></span>
+          <div class="single-chart">
+            <div style="position: absolute;
+            left: 50%;
+            transform: translate(-50%, 25px);">
+              <span class="ic ic-python"></span>
+            </div>
+            <div>
+              <svg viewBox="0 0 36 36" class="circular-chart python">
+                <path class="circle-bg"
+                  d="M18 2.0845
+                    a 10.9155 10.9155 0 0 1 0 31.831
+                    a 10.9155 10.9155 0 0 1 0 -31.831"
+                />
+                <path class="circle"
+                  stroke-dasharray="70, 100"
+                  d="M18 2.0845
+                    a 10.9155 10.9155 0 0 1 0 31.831
+                    a 10.9155 10.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+            </div>
+          </div>
+          
           <p>Flask 기반 GIS 시스템 개발 및 배포 경험 보유</p>
-          <p>Flask 기반 소켓 통신 기반 경진대회 스코어 보드 웹사이트 개발</p>
-          <p>Flask 기반 빅데이터 연구자를 위한 클라우드컴퓨팅 기반 커뮤니티 사이트 개발</p>
+          <p>Flask 기반 소켓 통신 경진대회 스코어 보드 Back-end 개발</p>
+          <p>Flask 기반 빅데이터 연구자를 위한 커뮤니티 사이트 Back-end 개발</p>
+          <p>Flask 기반 장애/요양 보호자를 위한 통합 플랫폼 Back-end 개발</p>
         </div>
         <div id="lg-slide-2">
           <span class="ic ic-java"></span>
-          <p>내용 추가</p>
+          <p>Servlet 기반 삼성 메디슨 ERP 연동 웹페이지 유지 보수</p>
+          <p>전자정부프레임워크 기반 OBD(On-Board Diagnostic) 정보 연동 앱 개발</p>
+          <p>JavaFX 활용 마이크로메터기(측정센서) 모니터링 시스템 개발</p>
+          <p>전자정부프레임워크 기반 IoT 비상벨 모니터링 시스템 개발 지원+</p>
         </div>
         <div id="lg-slide-3">
           <span class="ic ic-php"></span>
-          <p>내용 추가</p>
+          <p>게임 서버 개발</p>
+          <p>기획자용 서버 치트 사이트 개발</p>
         </div>
         <div id="lg-slide-4">
           <span class="ic ic-node"></span>
@@ -77,15 +105,16 @@ permalink: /aboutme.html
         </div>
         <div id="lg-slide-5">
           <span class="ic ic-js"></span>
-          <p>내용 추가</p>
+          <p>UI 컴포넌트 개발 경험 보유</p>
+          <p>Openlayers 기반 GIS 시스템 모듈 개발</p>
         </div>
         <div id="lg-slide-6">
           <span class="ic ic-html"></span>
-          <p>내용 추가</p>
+          <p>다년간 Web Service 개발 경험 보유</p>
         </div>
         <div id="lg-slide-7">
           <span class="ic ic-css"></span>
-          <p>내용 추가</p>
+          <p>다년간 Web Service 개발 경험 보유</p>
         </div>
       </div>
     </div>
@@ -354,6 +383,123 @@ permalink: /aboutme.html
     }
   }
 
+  .single-chart {
+    justify-content: space-around ;
+  }
+
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 175px;
+  }
+
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  .circular-chart.python .circle{
+    stroke: #FFCB3A;
+  }
+  .circular-chart.js .circle{
+    stroke: #fa812c;
+  }
+  .circular-chart.php .circle{
+    stroke: #7385cd;
+  }
+  .circular-chart.html .circle{
+    stroke: #f05c35;
+  }
+  .circular-chart.css .circle{
+    stroke: #007fc8;
+  }
+  .circular-chart.node .circle{
+    stroke: #8bc800;
+  }
+
+  .circular-chart.psql .circle{
+    stroke: #225f9a;
+  }
+  .circular-chart.odb .circle{
+    stroke: #fe1e00;
+  }
+  .circular-chart.mysql .circle{
+    stroke: #11678c;
+  }
+  .circular-chart.mongodb .circle{
+    stroke: #189344;
+  }
+  .circular-chart.es .circle{
+    stroke: #1e1e1e;
+  }
+  .circular-chart.Redis .circle{
+    stroke: #d72112;
+  }
+
+  .circular-chart.docker .circle{
+    stroke: #0e6d9f;
+  }
+  .circular-chart.k8s .circle{
+    stroke: #1c5eb3;
+  }
+  .circular-chart.linux .circle{
+    stroke: #474747;
+  }
+  .circular-chart.windows .circle{
+    stroke: #11afe9;
+  }
+
+  .circular-chart.vuejs .circle{
+    stroke: #38c486;
+  }
+  .circular-chart.flask .circle{
+    stroke: #000000;
+  }
+  .circular-chart.spring .circle{
+    stroke: #6fae4f;
+  }
+
+  .circular-chart.game .circle{
+    stroke: #640d78;
+  }
+  .circular-chart.gis .circle{
+    stroke: #19803f;
+  }
+  .circular-chart.ws .circle{
+    stroke: #8294fc;
+  }
+
+  .circular-chart.ps .circle{
+    stroke: #21caff;
+  }
+  .circular-chart.xd .circle{
+    stroke: #ff21bf;
+  }
+  .circular-chart.ai .circle{
+    stroke: #ff7d00;
+  }
+
+
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
 </style>
 
 <script>
