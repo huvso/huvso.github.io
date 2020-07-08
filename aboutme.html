@@ -39,23 +39,23 @@ permalink: /aboutme.html
   <h3><span class="highlight">T</span>echnology <span class="highlight">S</span>pecification</h3>
 
   <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'lg')" id="defaultOpen">Language</button>
-    <button class="tablinks" onclick="openCity(event, 'db')">DB</button>
-    <button class="tablinks" onclick="openCity(event, 'is')">Infra</button>
-    <button class="tablinks" onclick="openCity(event, 'fw')">Framework</button>
-    <button class="tablinks" onclick="openCity(event, 'dm')">Domain</button>
-    <button class="tablinks" onclick="openCity(event, 'ds')">Design</button>
+    <button class="tablinks" onclick="openCity(event, 'lg');" id="defaultOpen">Language</button>
+    <button class="tablinks" onclick="openCity(event, 'db');">DB</button>
+    <button class="tablinks" onclick="openCity(event, 'is');">Infra</button>
+    <button class="tablinks" onclick="openCity(event, 'fw');">Framework</button>
+    <button class="tablinks" onclick="openCity(event, 'dm');">Domain</button>
+    <button class="tablinks" onclick="openCity(event, 'ds');">Design</button>
   </div>
 
   <div id="lg" class="tabcontent">
     <div class="slider">
-      <a href="#lg-slide-1" onclick="setCircleChart('lg-slide-1', 'python');">Python</a>
-      <a href="#lg-slide-2" onclick="setCircleChart('lg-slide-2', 'java');">Java</a>
-      <a href="#lg-slide-3" onclick="setCircleChart('lg-slide-3', 'php');">PHP</a>
-      <a href="#lg-slide-4" onclick="setCircleChart('lg-slide-4', 'node');">Node.js</a>
-      <a href="#lg-slide-5" onclick="setCircleChart('lg-slide-5', 'js');">JavaScript</a>
-      <a href="#lg-slide-6" onclick="setCircleChart('lg-slide-6', 'html');">HTML</a>
-      <a href="#lg-slide-7" onclick="setCircleChart('lg-slide-7', 'css');">CSS</a>
+      <a href="#lg-slide-1" onclick="restartAniamtion(this)">Python</a>
+      <a href="#lg-slide-2" onclick="restartAniamtion(this)">Java</a>
+      <a href="#lg-slide-3" onclick="restartAniamtion(this)">PHP</a>
+      <a href="#lg-slide-4" onclick="restartAniamtion(this)">Node.js</a>
+      <a href="#lg-slide-5" onclick="restartAniamtion(this)">JavaScript</a>
+      <a href="#lg-slide-6" onclick="restartAniamtion(this)">HTML</a>
+      <a href="#lg-slide-7" onclick="restartAniamtion(this)">CSS</a>
     
       <div class="slides">
         <div id="lg-slide-1">
@@ -74,25 +74,35 @@ permalink: /aboutme.html
         </div>
         <div id="lg-slide-3">
           <div class="single-chart"></div>
-          <p>게임 서버 개발</p>
-          <p>기획자용 서버 치트 사이트 개발</p>
+          <div class="vertical-middle">
+            <p>게임 서버 개발</p>
+            <p>기획자용 서버 치트 사이트 개발</p>
+          </div>
         </div>
         <div id="lg-slide-4">
           <div class="single-chart"></div>
-          <p>내용 추가</p>
+          <div class="vertical-middle">
+            <p>내용 추가</p>
+          </div>
         </div>
         <div id="lg-slide-5">
           <div class="single-chart"></div>
-          <p>UI 컴포넌트 개발 경험 보유</p>
-          <p>Openlayers 기반 GIS 시스템 모듈 개발</p>
+          <div class="vertical-middle">
+            <p>UI 컴포넌트 개발 경험 보유</p>
+            <p>Openlayers 기반 GIS 시스템 모듈 개발</p>
+          </div>
         </div>
         <div id="lg-slide-6">
           <div class="single-chart"></div>
-          <p>다년간 Web Service 개발 경험 보유</p>
+          <div class="vertical-middle">
+            <p>다년간 Web Service 개발 경험 보유</p>
+          </div>
         </div>
         <div id="lg-slide-7">
           <div class="single-chart"></div>
-          <p>다년간 Web Service 개발 경험 보유</p>
+          <div class="vertical-middle">
+            <p>다년간 Web Service 개발 경험 보유</p>
+          </div>
         </div>
       </div>
     </div>
@@ -100,12 +110,12 @@ permalink: /aboutme.html
 
   <div id="db" class="tabcontent">
     <div class="slider">
-      <a href="#db-slide-1" onclick="setCircleChart('db-slide-1', 'psql');">PostgreSQL</a>
-      <a href="#db-slide-2" onclick="setCircleChart('db-slide-2', 'odb');">Oracle db</a>
-      <a href="#db-slide-3" onclick="setCircleChart('db-slide-3', 'msql');">MySQL</a>
-      <a href="#db-slide-4" onclick="setCircleChart('db-slide-4', 'mdb');">MongoDB</a>
-      <a href="#db-slide-5" onclick="setCircleChart('db-slide-5', 'es');">Elasticsearch</a>
-      <a href="#db-slide-6" onclick="setCircleChart('db-slide-6', 'redis');">Redis</a>
+      <a href="#db-slide-1" onclick="restartAniamtion(this)">PostgreSQL</a>
+      <a href="#db-slide-2" onclick="restartAniamtion(this)">Oracle db</a>
+      <a href="#db-slide-3" onclick="restartAniamtion(this)">MySQL</a>
+      <a href="#db-slide-4" onclick="restartAniamtion(this)">MongoDB</a>
+      <a href="#db-slide-5" onclick="restartAniamtion(this)">Elasticsearch</a>
+      <a href="#db-slide-6" onclick="restartAniamtion(this)">Redis</a>
     
       <div class="slides">
         <div id="db-slide-1">
@@ -138,10 +148,10 @@ permalink: /aboutme.html
 
   <div id="is" class="tabcontent">
     <div class="slider">
-      <a href="#is-slide-1" onclick="setCircleChart('is-slide-1', 'docker');">docker</a>
-      <a href="#is-slide-2" onclick="setCircleChart('is-slide-2', 'k8s');">kubernetes</a>
-      <a href="#is-slide-3" onclick="setCircleChart('is-slide-3', 'linux');">linux</a>
-      <a href="#is-slide-4" onclick="setCircleChart('is-slide-4', 'windows');">windows</a>
+      <a href="#is-slide-1" onclick="restartAniamtion(this)">docker</a>
+      <a href="#is-slide-2" onclick="restartAniamtion(this)">kubernetes</a>
+      <a href="#is-slide-3" onclick="restartAniamtion(this)">linux</a>
+      <a href="#is-slide-4" onclick="restartAniamtion(this)">windows</a>
       <div class="slides">
         <div id="is-slide-1">
           <div class="single-chart"></div>
@@ -165,9 +175,9 @@ permalink: /aboutme.html
 
   <div id="fw" class="tabcontent">
     <div class="slider">
-      <a href="#fw-slide-1" onclick="setCircleChart('fw-slide-1', 'vue');">vue.js</a>
-      <a href="#fw-slide-2" onclick="setCircleChart('fw-slide-2', 'flask');">flask</a>
-      <a href="#fw-slide-3" onclick="setCircleChart('fw-slide-3', 'spring');">spring</a>
+      <a href="#fw-slide-1" onclick="restartAniamtion(this)">vue.js</a>
+      <a href="#fw-slide-2" onclick="restartAniamtion(this)">flask</a>
+      <a href="#fw-slide-3" onclick="restartAniamtion(this)">spring</a>
       <div class="slides">
         <div id="fw-slide-1">
           <div class="single-chart"></div>
@@ -187,9 +197,9 @@ permalink: /aboutme.html
 
   <div id="dm" class="tabcontent">
     <div class="slider">
-      <a href="#dm-slide-1" onclick="setCircleChart('dm-slide-1', 'game');">Game</a>
-      <a href="#dm-slide-2" onclick="setCircleChart('dm-slide-2', 'gis');">GIS</a>
-      <a href="#dm-slide-3" onclick="setCircleChart('dm-slide-3', 'ws');">Web Service</a>
+      <a href="#dm-slide-1" onclick="restartAniamtion(this)">Game</a>
+      <a href="#dm-slide-2" onclick="restartAniamtion(this)">GIS</a>
+      <a href="#dm-slide-3" onclick="restartAniamtion(this)">Web Service</a>
       <div class="slides">
         <div id="dm-slide-1">
           <div class="single-chart"></div>
@@ -209,9 +219,9 @@ permalink: /aboutme.html
 
   <div id="ds" class="tabcontent">
     <div class="slider">
-      <a href="#ds-slide-1" onclick="setCircleChart('ds-slide-1', 'ps');">Photoshop</a>
-      <a href="#ds-slide-2" onclick="setCircleChart('ds-slide-2', 'xd');">XD</a>
-      <a href="#ds-slide-3" onclick="setCircleChart('ds-slide-3', 'ai');">Illustrator</a>
+      <a href="#ds-slide-1" onclick="restartAniamtion(this)">Photoshop</a>
+      <a href="#ds-slide-2" onclick="restartAniamtion(this)">XD</a>
+      <a href="#ds-slide-3" onclick="restartAniamtion(this)">Illustrator</a>
       <div class="slides">
         <div id="ds-slide-1">
           <div class="single-chart"></div>
@@ -382,7 +392,10 @@ permalink: /aboutme.html
     fill: none;
     stroke-width: 2.8;
     stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
+  }
+
+  .circle.animation {
+    animation: progress 1.5s ease-out forwards;
   }
 
   .chart-icon {
@@ -398,17 +411,16 @@ permalink: /aboutme.html
     margin-bottom: -125px
   }
 
+  .vertical-middle {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
   @keyframes progress {
     0% {
       stroke-dasharray: 0 100;
     }
-  }
-
-  .percentage {
-    fill: #666;
-    font-family: sans-serif;
-    font-size: 0.5em;
-    text-anchor: middle;
   }
 </style>
 
@@ -434,149 +446,186 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-const ts_spec = {
-  python: {
+const ts_spec = [
+  {
     iconName: 'python',
     percentage: 80,
-    bgColor: '#FFCB3A'
+    bgColor: '#FFCB3A',
+    silideId: 'lg-slide-1',
   },
-  java: {
+  {
     iconName: 'java',
     percentage: 60,
-    bgColor: '#1565C0'
+    bgColor: '#1565C0',
+    silideId: 'lg-slide-2',
   },
-  php: {
+  {
     iconName: 'php',
     percentage: 50,
-    bgColor: '#7385cd'
+    bgColor: '#7385cd',
+    silideId: 'lg-slide-3',
   },
-  node: {
+  {
     iconName: 'node',
     percentage: 50,
-    bgColor: '#8bc800'
+    bgColor: '#8bc800',
+    silideId: 'lg-slide-4',
   },
-  js: {
+  {
     iconName: 'js',
     percentage: 70,
-    bgColor: '#fa812c'
+    bgColor: '#fa812c',
+    silideId: 'lg-slide-5',
   },
-  html: {
+  {
     iconName: 'html',
     percentage: 100,
-    bgColor: '#f05c35'
+    bgColor: '#f05c35',
+    silideId: 'lg-slide-6',
   },
-  css: {
+  {
     iconName: 'css',
     percentage: 100,
-    bgColor: '#007fc8'
+    bgColor: '#007fc8',
+    silideId: 'lg-slide-7',
   },
 
-  psql: {
+  {
     iconName: 'psql',
     percentage: 100,
-    bgColor: '#225f9a'
+    bgColor: '#225f9a',
+    silideId: 'db-slide-1',
   },
-  odb: {
+  {
     iconName: 'odb',
     percentage: 100,
-    bgColor: '#fe1e00'
+    bgColor: '#fe1e00',
+    silideId: 'db-slide-2',
   },
-  msql: {
+  {
     iconName: 'msql',
     percentage: 100,
-    bgColor: '#11678c'
+    bgColor: '#11678c',
+    silideId: 'db-slide-3',
   },
-  mdb: {
+  {
     iconName: 'mdb',
     percentage: 100,
-    bgColor: '#189344'
+    bgColor: '#189344',
+    silideId: 'db-slide-4',
   },
-  es: {
+  {
     iconName: 'es',
     percentage: 100,
-    bgColor: '#1e1e1e'
+    bgColor: '#1e1e1e',
+    silideId: 'db-slide-5',
   },
-  redis: {
+  {
     iconName: 'redis',
     percentage: 100,
-    bgColor: '#d72112'
+    bgColor: '#d72112',
+    silideId: 'db-slide-6',
   },
 
-  docker: {
+  {
     iconName: 'docker',
-    percentage: 70,
-    bgColor: '#0e6d9f'
+    percentage: 100,
+    bgColor: '#0e6d9f',
+    silideId: 'is-slide-1',
   },
-  k8s: {
+  {
     iconName: 'k8s',
-    percentage: 70,
-    bgColor: '#1c5eb3'
+    percentage: 100,
+    bgColor: '#1c5eb3',
+    silideId: 'is-slide-2',
   },
-  linux: {
+  {
     iconName: 'linux',
-    percentage: 70,
-    bgColor: '#474747'
+    percentage: 100,
+    bgColor: '#474747',
+    silideId: 'is-slide-3',
   },
-  windows: {
+  {
     iconName: 'windows',
-    percentage: 70,
-    bgColor: '#11afe9'
+    percentage: 100,
+    bgColor: '#11afe9',
+    silideId: 'is-slide-4',
   },
 
-  vue: {
+  {
     iconName: 'vue',
-    percentage: 70,
-    bgColor: '#38c486'
+    percentage: 100,
+    bgColor: '#38c486',
+    silideId: 'fw-slide-1',
   },
-  flask: {
+  {
     iconName: 'flask',
-    percentage: 70,
-    bgColor: '#000000'
+    percentage: 100,
+    bgColor: '#000000',
+    silideId: 'fw-slide-2',
   },
-  spring: {
+  {
     iconName: 'spring',
-    percentage: 70,
-    bgColor: '#6fae4f'
+    percentage: 100,
+    bgColor: '#6fae4f',
+    silideId: 'fw-slide-3',
   },
 
-  game: {
+  {
     iconName: 'game',
-    percentage: 70,
-    bgColor: '#640d78'
+    percentage: 100,
+    bgColor: '#640d78',
+    silideId: 'dm-slide-1',
   },
-  gis: {
+  {
     iconName: 'gis',
-    percentage: 70,
-    bgColor: '#19803f'
+    percentage: 100,
+    bgColor: '#19803f',
+    silideId: 'dm-slide-2',
   },
-  ws: {
+  {
     iconName: 'ws',
-    percentage: 70,
-    bgColor: '#8294fc'
+    percentage: 100,
+    bgColor: '#8294fc',
+    silideId: 'dm-slide-3',
   },
 
-  ps: {
+  {
     iconName: 'ps',
-    percentage: 70,
-    bgColor: '#21caff'
+    percentage: 100,
+    bgColor: '#21caff',
+    silideId: 'ds-slide-1',
   },
-  xd: {
+  {
     iconName: 'xd',
-    percentage: 70,
-    bgColor: '#ff21bf'
+    percentage: 100,
+    bgColor: '#ff21bf',
+    silideId: 'ds-slide-2',
   },
-  ai: {
+  {
     iconName: 'ai',
-    percentage: 70,
-    bgColor: '#ff7d00'
-  },
+    percentage: 100,
+    bgColor: '#ff7d00',
+    silideId: 'ds-slide-3',
+  }
+]
+
+function restartAniamtion(el) {
+  let targetID = el.getAttribute('href').split('#')[1]
+
+  let targetArea = document.getElementById(targetID)
+  let target = targetArea.getElementsByClassName('circle animation')[0]
+
+  target.classList.remove('animation');
+  setTimeout(function() {
+    target.classList.add('animation')
+  },1);
+  
+  console.log()
+  console.log(target)
 }
 
-function setCircleChart(id, type) {
-  const iconName = ts_spec[type].iconName
-  const percentage = ts_spec[type].percentage
-  const bgColor = ts_spec[type].bgColor
-
+function setCircleChart(id, iconName, percentage, bgColor) {
   let div = document.createElement('div')
   div.setAttribute('class', 'single-chart')
 
@@ -591,7 +640,7 @@ function setCircleChart(id, type) {
   svgCircleBg.setAttribute('d', 'M18 2.0845 a 10.9155 10.9155 0 0 1 0 31.831 a 10.9155 10.9155 0 0 1 0 -31.831');
 
   let svgCircle = document.createElementNS("http://www.w3.org/2000/svg", 'path')
-  svgCircle.setAttribute('class', 'circle')
+  svgCircle.setAttribute('class', 'circle animation')
   svgCircle.setAttribute('stroke-dasharray', `${percentage}, 100`)
   svgCircle.setAttribute('d', 'M18 2.0845 a 10.9155 10.9155 0 0 1 0 31.831 a 10.9155 10.9155 0 0 1 0 -31.831');
 
@@ -615,9 +664,11 @@ function setCircleChart(id, type) {
   targetDiv.innerHTML = "";
   targetDiv.appendChild(divIcon)
   targetDiv.appendChild(divChart)
-
-  console.log(div)
 }
 
 document.getElementById("defaultOpen").click();
+
+ts_spec.forEach(function (v, i) {
+  setCircleChart(v['silideId'], v['iconName'], v['percentage'], v['bgColor'])
+})
 </script>
