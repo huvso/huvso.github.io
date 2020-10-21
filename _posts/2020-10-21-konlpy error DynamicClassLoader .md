@@ -1,7 +1,7 @@
 ---
 comments: true
 title: KoNLPy org.jpype.classloader.DynamicClassLoader Error 해결
-key: 20201021
+key: 202010216
 picture_frame: shadow
 tags:
   - AI
