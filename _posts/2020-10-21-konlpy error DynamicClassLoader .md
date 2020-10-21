@@ -7,7 +7,7 @@ tags:
   - AI
 ---
 
-# KoNLPy org.jpype.classloader.DynamicClassLoader Error 해결
+# KoNLPy DynamicClassLoader classNofFound 해결
   - 오늘(2020.10.21) 기준으로 Jpype가 1.1.0으로 업데이트 되었다.
   - 참조: [https://pypi.org/project/JPype1/](https://pypi.org/project/JPype1/)
   - 오늘 기준 이후로 KoNLPy를 기본으로 설치하게 되면 다음과 같은 에러가 나타날 것이다
