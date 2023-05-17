@@ -1,0 +1,24 @@
+---
+layout: page
+title: randomImg
+show_title: false
+permalink: /random.html
+---
+<script>
+  window.onload = function() {
+    let url_list = [
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif",
+      "https://cdn.jsdelivr.net/gh/huvso/my_memo/IBO/an.gif"
+    ]
+
+    window.location=link-url_list[Math.floor(Math.random()*url_list.length)]
+  }
+</script>
